@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Casos Covid</title>
+</head>
+<body>
+    <h1>Casos de COVID-19</h1>
+    <ul id="casos-lista"></ul>
+
+    <script src="connectionBD.js"></script>
+    <script>
+        async function mostrarCasos() {
+            const casos = await obtenerCasosCovid();
+            const listaCasos = document.getElementById('casos-lista');
+            casos.forEach(caso => {
+                const li = document.createElement('li');
+                li.textContent = `ID: ${caso.id}, Fecha: ${caso.fecha}, Paciente: ${caso.paciente}`; // Ajusta los campos según tu tabla
+                listaCasos.appendChild(li);
+            });
+        }
+
+        mostrarCasos();
+    </script>
+</body>
+</html>
