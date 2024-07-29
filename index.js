@@ -8,7 +8,7 @@ const port = 3000;
 
 // Configura el motor de plantillas EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join('/Users/mariafernandamanriquezangeles/Desktop/Escuela/SS/nodeWOmysql', 'views'));
+app.set('views', path.join('/Users/mariafernandamanriquezangeles/Desktop/Escuela/SS/dashboardUAM/', 'views'));
 
 // Conexión a la base de datos
 const pool = mysql.createPool({
