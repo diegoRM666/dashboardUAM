@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS `sensor`.`profesor` (
   `reconocido` TINYINT NULL,
   `rfid` VARCHAR(45) NULL,
   `count` INT NULL,
-  `idpreferatmo` INT NULL,
   PRIMARY KEY (`idprofesor`))
 ENGINE = InnoDB;
 

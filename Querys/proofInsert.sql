@@ -1,11 +1,11 @@
 USE sensor;
 
 -- Insert sample data into profesor table
-INSERT INTO profesor (nombre, reconocido, rfid, count, idpreferatmo)
+INSERT INTO profesor (nombre, reconocido, rfid, count)
 VALUES
-  ('Profesor 1', 1, 'RFID123', 5, NULL),
-  ('Profesor 2', 0, 'RFID456', 3, NULL),
-  ('Profesor 3', 1, 'RFID789', 8, NULL);
+  ('Profesor 1', 1, 'RFID123', 5),
+  ('Profesor 2', 0, 'RFID456', 3),
+  ('Profesor 3', 1, 'RFID789', 8);
 
 -- Insert sample data into salon table
 INSERT INTO salon (edificio, salon)
