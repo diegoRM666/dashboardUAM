@@ -5,32 +5,33 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema sensor
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema sensor
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `sensor` ;
+USE `sensor` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`profesor`
+-- Table `sensor`.`profesor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`profesor` (
+CREATE TABLE IF NOT EXISTS `sensor`.`profesor` (
   `idprofesor` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `reconocido` TINYINT NULL,
   `rfid` VARCHAR(45) NULL,
   `count` INT NULL,
+  `idpreferatmo` INT NULL,
   PRIMARY KEY (`idprofesor`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`salon`
+-- Table `sensor`.`salon`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`salon` (
+CREATE TABLE IF NOT EXISTS `sensor`.`salon` (
   `idsalon` INT NOT NULL AUTO_INCREMENT,
   `edificio` VARCHAR(45) NULL,
   `salon` VARCHAR(45) NULL,
@@ -39,44 +40,64 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`condicion`
+-- Table `sensor`.`condicion`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`condicion` (
+CREATE TABLE IF NOT EXISTS `sensor`.`condicion` (
   `idcondicion` INT NOT NULL AUTO_INCREMENT,
   `temperatura` FLOAT NULL,
   `humedad` FLOAT NULL,
   `luminosidad` FLOAT NULL,
-  PRIMARY KEY (`idcondicion`))
+  `timestamp` DATETIME NULL,
+  `idsalon` INT NULL,
+  PRIMARY KEY (`idcondicion`),
+  INDEX `fk_condicion_salon_idx` (`idsalon` ASC) VISIBLE,
+  CONSTRAINT `fk_condicion_salon`
+    FOREIGN KEY (`idsalon`)
+    REFERENCES `sensor`.`salon` (`idsalon`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`visita`
+-- Table `sensor`.`visita`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`visita` (
+CREATE TABLE IF NOT EXISTS `sensor`.`visita` (
   `idvisita` INT NOT NULL AUTO_INCREMENT,
   `fecha` DATE NULL,
   `hora` VARCHAR(45) NULL,
   `idsalon` INT NULL,
   `idprofesor` INT NULL,
-  `idcondicion` INT NULL,
   PRIMARY KEY (`idvisita`),
   INDEX `fk_visita_profesor_idx` (`idprofesor` ASC) VISIBLE,
-  INDEX `fk_visita_condicion_idx` (`idcondicion` ASC) VISIBLE,
   INDEX `fk_visita_salon_idx` (`idsalon` ASC) VISIBLE,
   CONSTRAINT `fk_visita_profesor`
     FOREIGN KEY (`idprofesor`)
-    REFERENCES `mydb`.`profesor` (`idprofesor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_visita_condicion`
-    FOREIGN KEY (`idcondicion`)
-    REFERENCES `mydb`.`condicion` (`idcondicion`)
+    REFERENCES `sensor`.`profesor` (`idprofesor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_visita_salon`
     FOREIGN KEY (`idsalon`)
-    REFERENCES `mydb`.`salon` (`idsalon`)
+    REFERENCES `sensor`.`salon` (`idsalon`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `sensor`.`preferencias_atmosfericas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sensor`.`preferencias_atmosfericas` (
+  `idpreferatmo` INT NOT NULL AUTO_INCREMENT,
+  `temperatura` FLOAT NULL,
+  `humedad` FLOAT NULL,
+  `luminosidad` FLOAT NULL,
+  `idprofesor` INT NOT NULL,
+  PRIMARY KEY (`idpreferatmo`),
+  INDEX `fk_preferencias_atmosfericas_profesor1_idx` (`idprofesor` ASC) VISIBLE,
+  CONSTRAINT `fk_preferencias_atmosfericas_profesor1`
+    FOREIGN KEY (`idprofesor`)
+    REFERENCES `sensor`.`profesor` (`idprofesor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

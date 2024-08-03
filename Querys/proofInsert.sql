@@ -1,20 +1,36 @@
--- Inserciones de 'profesor'
-INSERT INTO profesor (nombre, reconocido, rfid, count)
-VALUES ("Profesor Juan Perez", 1, "1234567890", 0),
-       ("Profesora Maria Lopez", 1, "9876543210", 0);
--- ---------------------------------------------------
--- Inserciones de 'salon'
+USE sensor;
+
+-- Insert sample data into profesor table
+INSERT INTO profesor (nombre, reconocido, rfid, count, idpreferatmo)
+VALUES
+  ('Profesor 1', 1, 'RFID123', 5, NULL),
+  ('Profesor 2', 0, 'RFID456', 3, NULL),
+  ('Profesor 3', 1, 'RFID789', 8, NULL);
+
+-- Insert sample data into salon table
 INSERT INTO salon (edificio, salon)
-VALUES ("Edificio Principal", "Salon 101"),
-       ("Edificio Secundario", "Salon 202");
--- ---------------------------------------------------
--- Inserciones de 'condicion'
-INSERT INTO condicion (temperatura, humedad, luminosidad)
-VALUES (22.5, 55.0, 300.0),
-       (24.0, 60.0, 400.0);
--- ----------------------------------------------------
--- Inserciones de 'visita'
-INSERT INTO visita (fecha, hora, idsalon, idprofesor, idcondicion)
-VALUES (CURDATE(), "10:00:00", 1, 1, 1),  
-       (DATE_SUB(CURDATE(), INTERVAL 1 DAY), "11:30:00", 2, 2, 2);
--- ----------------------------------------------------
+VALUES
+  ('A', '101'),
+  ('B', '202'),
+  ('C', '303');
+
+-- Insert sample data into condicion table
+INSERT INTO condicion (temperatura, humedad, luminosidad, timestamp, idsalon)
+VALUES
+  (22.5, 45, 80, NOW(), 1),
+  (25, 50, 75, NOW(), 2),
+  (20, 35, 90, NOW(), 3);
+
+-- Insert sample data into visita table
+INSERT INTO visita (fecha, hora, idsalon, idprofesor)
+VALUES
+  ('2023-11-15', '10:30', 1, 1),
+  ('2023-11-16', '12:00', 2, 2),
+  ('2023-11-17', '14:15', 3, 3);
+
+-- Insert sample data into preferencias_atmosfericas table
+INSERT INTO preferencias_atmosfericas (temperatura, humedad, luminosidad, idprofesor)
+VALUES
+  (23, 40, 85, 1),
+  (24, 55, 70, 2),
+  (21, 38, 92, 3);
