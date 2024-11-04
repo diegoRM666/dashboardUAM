@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `sensor`.`condicion` (
   `temperatura` FLOAT NULL DEFAULT NULL,
   `humedad` FLOAT NULL DEFAULT NULL,
   `luminosidad` FLOAT NULL DEFAULT NULL,
-  `timestamp` DATETIME NULL DEFAULT NULL,
+  `time_condicion` DATETIME NULL DEFAULT NULL,
   `idsalon` INT NULL DEFAULT NULL,
   PRIMARY KEY (`idcondicion`),
   INDEX `fk_condicion_salon_idx` (`idsalon` ASC) VISIBLE,
@@ -60,7 +60,6 @@ CREATE TABLE IF NOT EXISTS `sensor`.`profesor` (
   `nombre` VARCHAR(45) NULL DEFAULT NULL,
   `reconocido` TINYINT NULL DEFAULT NULL,
   `rfid` VARCHAR(45) NULL DEFAULT NULL,
-  `count` INT NULL DEFAULT NULL,
   PRIMARY KEY (`idprofesor`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
@@ -93,8 +92,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sensor`.`visita` (
   `idvisita` INT NOT NULL AUTO_INCREMENT,
-  `fecha` DATE NULL DEFAULT NULL,
-  `hora` VARCHAR(45) NULL DEFAULT NULL,
+  `visita_entrada` DATETIME NULL DEFAULT NULL,
+  `visita_salida` DATETIME NULL DEFAULT NULL,
   `idsalon` INT NULL DEFAULT NULL,
   `idprofesor` INT NULL DEFAULT NULL,
   PRIMARY KEY (`idvisita`),

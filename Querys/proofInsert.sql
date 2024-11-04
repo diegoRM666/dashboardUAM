@@ -1,27 +1,27 @@
 USE sensor;
 
 -- Insert sample data into profesor table
-INSERT INTO profesor (idprofesor, nombre, reconocido, rfid, count) VALUES
-(1, 'Juan Pérez', 1, 'RFID001', 1),
-(2, 'María López', 0, 'RFID002', 1),
-(3, 'Carlos García', 1, 'RFID003', 1),
-(4, 'Ana Martínez', 0, 'RFID004', 1),
-(5, 'Luis Fernández', 1, 'RFID005', 1),
-(6, 'Sofía Gómez', 1, 'RFID006', 1),
-(7, 'Pedro Sánchez', 0, 'RFID007', 1),
-(8, 'Laura Ortiz', 1, 'RFID008', 1),
-(9, 'José Morales', 0, 'RFID009', 1),
-(10, 'Elena Castillo', 1, 'RFID010', 1),
-(11, 'Miguel Herrera', 0, 'RFID011', 1),
-(12, 'Lucía Rivera', 1, 'RFID012', 1),
-(13, 'Daniel Ruiz', 0, 'RFID013', 1),
-(14, 'Claudia Torres', 1, 'RFID014', 1),
-(15, 'Andrés Vargas', 0, 'RFID015', 1),
-(16, 'Patricia Méndez', 1, 'RFID016', 1),
-(17, 'Francisco Cruz', 0, 'RFID017', 1),
-(18, 'Gabriela Ríos', 1, 'RFID018', 1),
-(19, 'Alberto Jiménez', 0, 'RFID019', 1),
-(20, 'Marta Delgado', 1, 'RFID020', 1);
+INSERT INTO profesor (idprofesor, nombre, reconocido, rfid) VALUES
+(1, 'Juan Pérez', 1, 'RFID001'),
+(2, 'María López', 0, 'RFID002'),
+(3, 'Carlos García', 1, 'RFID003'),
+(4, 'Ana Martínez', 0, 'RFID004'),
+(5, 'Luis Fernández', 1, 'RFID005'),
+(6, 'Sofía Gómez', 1, 'RFID006'),
+(7, 'Pedro Sánchez', 0, 'RFID007'),
+(8, 'Laura Ortiz', 1, 'RFID008'),
+(9, 'José Morales', 0, 'RFID009'),
+(10, 'Elena Castillo', 1, 'RFID010'),
+(11, 'Miguel Herrera', 0, 'RFID011'),
+(12, 'Lucía Rivera', 1, 'RFID012'),
+(13, 'Daniel Ruiz', 0, 'RFID013'),
+(14, 'Claudia Torres', 1, 'RFID014'),
+(15, 'Andrés Vargas', 0, 'RFID015'),
+(16, 'Patricia Méndez', 1, 'RFID016'),
+(17, 'Francisco Cruz', 0, 'RFID017'),
+(18, 'Gabriela Ríos', 1, 'RFID018'),
+(19, 'Alberto Jiménez', 0, 'RFID019'),
+(20, 'Marta Delgado', 1, 'RFID020');
 
 
 -- Insert sample data into salon table
@@ -48,7 +48,7 @@ INSERT INTO salon (idsalon, edificio, salon) VALUES
 (20, 'Edificio G', '702');
 
 -- Insert sample data into condicion table
-INSERT INTO condicion (idcondicion, temperatura, humedad, luminosidad, timestamp, idsalon) VALUES
+INSERT INTO condicion (idcondicion, temperatura, humedad, luminosidad, time_condicion, idsalon) VALUES
 (1, 22.5, 50.0, 300.0, '2024-10-01 08:00:00', 1),
 (2, 21.0, 55.0, 280.0, '2024-10-01 09:00:00', 2),
 (3, 23.0, 48.0, 310.0, '2024-10-02 10:00:00', 3),
@@ -71,30 +71,31 @@ INSERT INTO condicion (idcondicion, temperatura, humedad, luminosidad, timestamp
 (20, 23.7, 54.0, 310.0, '2024-10-19 17:00:00', 20);
 
 -- Insert sample data into visita table
-INSERT INTO visita (idvisita, fecha, hora, idsalon, idprofesor) VALUES
-(1, '2024-10-01', '08:00', 1, 1),
-(2, '2024-10-01', '09:00', 2, 2),
-(3, '2024-10-02', '10:00', 3, 3),
-(4, '2024-10-03', '11:00', 4, 4),
-(5, '2024-10-04', '12:00', 5, 5),
-(6, '2024-10-05', '13:00', 6, 6),
-(7, '2024-10-06', '14:00', 7, 7),
-(8, '2024-10-07', '15:00', 8, 8),
-(9, '2024-10-08', '16:00', 9, 9),
-(10, '2024-10-09', '17:00', 10, 10),
-(11, '2024-10-10', '08:00', 11, 11),
-(12, '2024-10-11', '09:00', 12, 12),
-(13, '2024-10-12', '10:00', 13, 13),
-(14, '2024-10-13', '11:00', 14, 14),
-(15, '2024-10-14', '12:00', 15, 15),
-(16, '2024-10-15', '13:00', 16, 16),
-(17, '2024-10-16', '14:00', 17, 17),
-(18, '2024-10-17', '15:00', 18, 18),
-(19, '2024-10-18', '16:00', 19, 19),
-(20, '2024-10-19', '17:00', 20, 20);
+INSERT INTO visita (idvisita, visita_entrada, visita_salida, idsalon, idprofesor) VALUES
+(1, '2024-10-01 08:00', '2024-10-01 09:00', 1, 1),
+(2, '2024-10-01 09:00', '2024-10-01 10:00', 2, 2),
+(3, '2024-10-02 10:00', '2024-10-02 11:00',  3, 3),
+(4, '2024-10-03 11:00', '2024-10-03 12:00', 4, 4),
+(5, '2024-10-04 12:00', '2024-10-04 13:00', 5, 5),
+(6, '2024-10-05 13:00', '2024-10-05 14:00', 6, 6),
+(7, '2024-10-06 14:00', '2024-10-06 15:00', 7, 7),
+(8, '2024-10-07 15:00', '2024-10-07 16:00', 8, 8),
+(9, '2024-10-08 16:00', '2024-10-08 17:00', 9, 9),
+(10, '2024-10-09 17:00', '2024-10-09 18:00',  10, 10),
+(11, '2024-10-10 08:00', '2024-10-10 09:00', 11, 11),
+(12, '2024-10-11 09:00', '2024-10-11 10:00', 12, 12),
+(13, '2024-10-12 10:00', '2024-10-12 11:00', 13, 13),
+(14, '2024-10-13 11:00', '2024-10-13 12:00', 14, 14),
+(15, '2024-10-14 12:00', '2024-10-14 13:00', 15, 15),
+(16, '2024-10-15 13:00','2024-10-15 14:00', 16, 16),
+(17, '2024-10-16 14:00','2024-10-16 15:00', 17, 17),
+(18, '2024-10-17 15:00','2024-10-17 16:00', 18, 18),
+(19, '2024-10-18 16:00','2024-10-18 17:00', 19, 19),
+(20, '2024-10-19 17:00','2024-10-19 18:00', 20, 20);
+
 
 -- Insert sample data into preferencias_atmosfericas table
-INSERT INTO preferencias_atmosfericas (idprefatm, temperatura, humedad, luminosidad, idprofesor) VALUES
+INSERT INTO preferencias_atmosfericas (idpreferatmo, temperatura, humedad, luminosidad, idprofesor) VALUES
 (1, 22.5, 50.0, 300.0, 1),
 (2, 21.0, 55.0, 280.0, 2),
 (3, 23.0, 48.0, 310.0, 3),
@@ -115,4 +116,17 @@ INSERT INTO preferencias_atmosfericas (idprefatm, temperatura, humedad, luminosi
 (18, 21.3, 56.0, 275.0, 18),
 (19, 22.8, 52.0, 300.0, 19),
 (20, 23.7, 54.0, 310.0, 20);
+
+
+INSERT INTO visita (visita_entrada, visita_salida, idsalon, idprofesor) VALUES
+('2024-10-01 09:00', '2024-10-01 10:00', 1, 2),
+('2024-10-01 10:00', '2024-10-01 11:00', 1, 2),
+('2024-10-01 11:00', '2024-10-01 12:00', 1, 3);
+
+
+INSERT INTO visita (visita_entrada, visita_salida, idsalon, idprofesor) VALUES
+('2024-10-02 09:00', '2024-10-01 10:00', 1, 1),
+('2024-10-02 10:00', '2024-10-01 11:00', 1, 1),
+('2024-10-03 11:00', '2024-10-01 12:00', 1, 2);
+
 
