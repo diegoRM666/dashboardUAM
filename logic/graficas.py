@@ -218,6 +218,7 @@ def actualizacion_condicion (salon_seleccionado, edificio_seleccionado):
         st.error(f"Error: {condiciones_salon}")
 
 
+
 def profesor_pa (): 
     st.markdown("-----")
     st.markdown("## Información profesores")
@@ -227,6 +228,21 @@ def profesor_pa ():
     # Selector de Edificio
     profesor_seleccionado = st.selectbox("Selecciona un profesor", profesores['nombre'].unique())
 
+    profesor_it = bdc.consultar(
+        f"select s.salon as salon, s.edificio as edificio, v.visita_entrada as entrada, v.visita_salida as salida "
+        f"from visita v "
+        f"inner join salon s on s.idsalon = v.idsalon "
+        f"inner join profesor p on p.idprofesor = v.idprofesor "
+        f"where p.nombre = '{profesor_seleccionado}'; "
+        )
+    
+    if isinstance(profesor_it, pd.DataFrame) and not profesor_it.empty:
+        st.markdown("### Itinerario")
+        st.table(profesor_it)
+    else:
+        st.error(f"Error: {profesor_it}")
+
+    
     # Condiciones del salon
     pa_seleccionada = bdc.consultar(
         f"select p.nombre as nombre, rfid as RFID, pa.temperatura as temperatura, pa.humedad as humedad, pa.luminosidad as luminosidad "
@@ -234,6 +250,8 @@ def profesor_pa ():
         f"where p.nombre = '{profesor_seleccionado}' ;")
     
     if isinstance (pa_seleccionada, pd.DataFrame) and not pa_seleccionada.empty:
+        st.markdown("-----")
+        st.markdown("### Preferencias Atmosfericas")
         reset_pa = pa_seleccionada.reset_index(drop=True)
         st.table(reset_pa)
 
@@ -246,6 +264,7 @@ def profesor_pa ():
             nueva_humedad = st.number_input("Nueva Humedad (g/m^3)", min_value=0.0, max_value=100.0, value=reset_pa.at[0, 'humedad'])
             nueva_luminosidad = st.number_input("Nueva Luminosidad (lx)", min_value=0.0, max_value=10000.0, value=reset_pa.at[0, 'luminosidad'])
             
+
             # Botón para enviar cambios
             submit_button = st.form_submit_button(label="Actualizar Preferencias")
             
