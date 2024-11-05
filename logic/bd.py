@@ -30,7 +30,7 @@ def consultar(query):
     connection = conectarBase()
     if connection is None:
         print("No se pudo establecer la conexión a la base de datos.")
-        return None
+        return "No se pudo establecer la conexión a la base de datos."
 
     try:
         # Ejecutar la consulta y obtener los resultados en un DataFrame
@@ -39,11 +39,37 @@ def consultar(query):
 
     except Error as e:
         print("Error al ejecutar la consulta:", e)
-        return None
+        msj = f"Error al ejecutar la consulta: {e}"
+        return msj
 
     finally:
         # Cerrar la conexión
         cerrarConexion(connection)
+
+def actualizar(query):
+    """Actualiza una o varias tablas en la base de datos y devuelve un mensaje de éxito o error."""
+    connection = conectarBase()
+    if connection is None:
+        print("No se pudo establecer la conexión a la base de datos.")
+        return "No se pudo establecer la conexión a la base de datos."
+    
+    try:
+        # Ejecuta la actualización
+        cursor = connection.cursor()
+        cursor.execute(query)
+        connection.commit()  # Asegura que la actualización se guarde en la BD
+        msj = "Actualización exitosa."
+        return msj
+
+    except Error as e:
+        print("Error al ejecutar la actualización:", e)
+        msj = f"Error al ejecutar la actualización: {e}"
+        return msj
+
+    finally:
+        # Cierra la conexión si fue establecida
+        if connection:
+            cerrarConexion(connection)
 
 
 # Cerrar la conexión de BD

@@ -32,7 +32,7 @@ def ocupacion_salonesDB():
     #Generacion de columnas para que se vea como un dashboard
     col1, col2 = st.columns([1,1])
     # Mostrar el DataFrame en Streamlit
-    if ocupacion_salon is not None and not ocupacion_salon.empty:
+    if isinstance(ocupacion_salon, pd.DataFrame) and not ocupacion_salon.empty:
         # Convertir las columnas de tiempo
         ocupacion_salon['entrada'] = pd.to_datetime(ocupacion_salon['entrada'])
         ocupacion_salon['salida'] = pd.to_datetime(ocupacion_salon['salida'])
@@ -95,9 +95,15 @@ def ocupacion_salonesDB():
             
             # Mostrar la gráfica en Streamlit
             st.plotly_chart(fig_dona2, use_container_width=True)
+        actualizacion_condicion(salon_seleccionado, edificio_seleccionado)
     else:
-        st.write("No hay datos disponibles para el salón seleccionado.")
+        st.error(f"Error: {ocupacion_salon}")
 
+    
+
+def actualizacion_condicion (salon_seleccionado, edificio_seleccionado):
+    st.markdown("----")
+    st.markdown("## Conficiones Salón")
     # Condiciones del salon: 
     condiciones_salon = bdc.consultar(
         f"SELECT s.edificio AS edificio, s.salon AS salon, c.temperatura AS temperatura, " 
@@ -105,113 +111,115 @@ def ocupacion_salonesDB():
         f"FROM salon s "
         f"INNER JOIN condicion c ON c.idsalon = s.idsalon "
         f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}';")
-    
-    print(condiciones_salon)
 
-    col21, col22 = st.columns([1,1])
+    if isinstance(condiciones_salon, pd.DataFrame) and not condiciones_salon.empty:
+        col21, col22 = st.columns([1,1])
 
-    with col21:
-        # Convertir la columna de fechas a tipo datetime
-        condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
+        with col21:
+            # Convertir la columna de fechas a tipo datetime
+            condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
 
-        # Crear la figura de la gráfica de línea
-        fig_temperatura = go.Figure()
+            # Crear la figura de la gráfica de línea
+            fig_temperatura = go.Figure()
 
-        # Añadir la línea de temperatura al gráfico
-        fig_temperatura.add_trace(go.Scatter(
-            x=condiciones_salon['fecha'], 
-            y=condiciones_salon['temperatura'],
-            mode='lines+markers',  # Modo "líneas y puntos"
-            name='Temperatura',
-            line=dict(color='red'),  # Color de la línea
-            marker=dict(size=6)  # Tamaño de los puntos
-        ))
+            # Añadir la línea de temperatura al gráfico
+            fig_temperatura.add_trace(go.Scatter(
+                x=condiciones_salon['fecha'], 
+                y=condiciones_salon['temperatura'],
+                mode='lines+markers',  # Modo "líneas y puntos"
+                name='Temperatura',
+                line=dict(color='red'),  # Color de la línea
+                marker=dict(size=6)  # Tamaño de los puntos
+            ))
 
-        # Configuración de la gráfica
-        fig_temperatura.update_layout(
-            title="Variación de la Temperatura en el Tiempo",
-            xaxis_title="Fecha",
-            yaxis_title="Temperatura (°C)",
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
-            plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
-        )
+            # Configuración de la gráfica
+            fig_temperatura.update_layout(
+                title="Variación de la Temperatura en el Tiempo",
+                xaxis_title="Fecha",
+                yaxis_title="Temperatura (°C)",
+                paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
+                plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
+            )
 
-        st.plotly_chart(fig_temperatura, use_container_width=True)
+            st.plotly_chart(fig_temperatura, use_container_width=True)
 
-    with col22:
-        # Convertir la columna de fechas a tipo datetime
-        condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
+        with col22:
+            # Convertir la columna de fechas a tipo datetime
+            condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
 
-        # Crear la figura de la gráfica de línea
-        fig_humedad = go.Figure()
+            # Crear la figura de la gráfica de línea
+            fig_humedad = go.Figure()
 
-        # Añadir la línea de temperatura al gráfico
-        fig_humedad.add_trace(go.Scatter(
-            x=condiciones_salon['fecha'], 
-            y=condiciones_salon['humedad'],
-            mode='lines+markers',  # Modo "líneas y puntos"
-            name='Humedad',
-            line=dict(color='blue'),  # Color de la línea
-            marker=dict(size=6)  # Tamaño de los puntos
-        ))
+            # Añadir la línea de temperatura al gráfico
+            fig_humedad.add_trace(go.Scatter(
+                x=condiciones_salon['fecha'], 
+                y=condiciones_salon['humedad'],
+                mode='lines+markers',  # Modo "líneas y puntos"
+                name='Humedad',
+                line=dict(color='blue'),  # Color de la línea
+                marker=dict(size=6)  # Tamaño de los puntos
+            ))
 
-        # Configuración de la gráfica
-        fig_humedad.update_layout(
-            title="Variación de la Humedad en el Tiempo",
-            xaxis_title="Fecha",
-            yaxis_title="Humedad (g/m^3)",
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
-            plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
-        )
+            # Configuración de la gráfica
+            fig_humedad.update_layout(
+                title="Variación de la Humedad en el Tiempo",
+                xaxis_title="Fecha",
+                yaxis_title="Humedad (g/m^3)",
+                paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
+                plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
+            )
 
-        # Mostrar la gráfica en Streamlit
-        st.plotly_chart(fig_humedad, use_container_width=True)
+            # Mostrar la gráfica en Streamlit
+            st.plotly_chart(fig_humedad, use_container_width=True)
 
-    col31, col32 = st.columns([1,1])
+        col31, col32 = st.columns([1,1])
 
-    with col31:
-        # Convertir la columna de fechas a tipo datetime
-        condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
+        with col31:
+            # Convertir la columna de fechas a tipo datetime
+            condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha'])
 
-        # Crear la figura de la gráfica de línea
-        fig_luminosidad = go.Figure()
+            # Crear la figura de la gráfica de línea
+            fig_luminosidad = go.Figure()
 
-        # Añadir la línea de luminosidad al gráfico
-        fig_luminosidad.add_trace(go.Scatter(
-            x=condiciones_salon['fecha'], 
-            y=condiciones_salon['luminosidad'],
-            mode='lines+markers',  # Modo "líneas y puntos"
-            name='Luminosidad',
-            line=dict(color='yellow'),  # Color de la línea
-            marker=dict(size=6)  # Tamaño de los puntos
-        ))
+            # Añadir la línea de luminosidad al gráfico
+            fig_luminosidad.add_trace(go.Scatter(
+                x=condiciones_salon['fecha'], 
+                y=condiciones_salon['luminosidad'],
+                mode='lines+markers',  # Modo "líneas y puntos"
+                name='Luminosidad',
+                line=dict(color='yellow'),  # Color de la línea
+                marker=dict(size=6)  # Tamaño de los puntos
+            ))
 
-        # Configuración de la gráfica
-        fig_luminosidad.update_layout(
-            title="Variación de la Luminosidad en el Tiempo",
-            xaxis_title="Fecha",
-            yaxis_title="Luminosidad (lx)",
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
-            plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
-        )
-        # Mostrar la gráfica en Streamlit
-        st.plotly_chart(fig_luminosidad, use_container_width=True)
-    
-    # Agrupacion por fecha: 
+            # Configuración de la gráfica
+            fig_luminosidad.update_layout(
+                title="Variación de la Luminosidad en el Tiempo",
+                xaxis_title="Fecha",
+                yaxis_title="Luminosidad (lx)",
+                paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
+                plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
+            )
+            # Mostrar la gráfica en Streamlit
+            st.plotly_chart(fig_luminosidad, use_container_width=True)
+        
+        # Promedios :
+        with col32: 
+            # Convertir la columna de fechas a tipo datetime
+            condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha']).dt.date
 
+            # Agrupar por fecha y calcular el promedio
+            promedios = condiciones_salon.groupby('fecha')[['temperatura', 'humedad', 'luminosidad']].mean().reset_index()
 
-    with col32: 
-        # Convertir la columna de fechas a tipo datetime
-        condiciones_salon['fecha'] = pd.to_datetime(condiciones_salon['fecha']).dt.date
+            promedios = promedios.rename(columns={'temperatura': 'temperaturaAVG', 'humedad': 'humedadAVG', 'luminosidad': 'luminosidadAVG'})
 
-        # Agrupar por fecha y calcular el promedio
-        promedios = condiciones_salon.groupby('fecha')[['temperatura', 'humedad', 'luminosidad']].mean().reset_index()
-
-        # Mostrar los resultados en Streamlit
-        st.dataframe(promedios)
+            # Mostrar los resultados en Streamlit
+            st.dataframe(promedios)
+    else:
+        st.error(f"Error: {condiciones_salon}")
 
 
 def profesor_pa (): 
+    st.markdown("-----")
     st.markdown("## Información profesores")
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     profesores = bdc.consultar("SELECT nombre FROM sensor.profesor;")
@@ -225,5 +233,31 @@ def profesor_pa ():
         f"from profesor p inner join preferencias_atmosfericas pa on p.idprofesor = pa.idprofesor "
         f"where p.nombre = '{profesor_seleccionado}' ;")
     
-    reset_pa = pa_seleccionada.reset_index(drop=True)
-    st.table(reset_pa)
+    if isinstance (pa_seleccionada, pd.DataFrame) and not pa_seleccionada.empty:
+        reset_pa = pa_seleccionada.reset_index(drop=True)
+        st.table(reset_pa)
+
+        # Crear formulario para actualizar preferencias
+        with st.form(key='form_actualizar_pa'):
+            st.write("### Actualizar preferencias atmosféricas")
+            
+            # Campos de entrada para nuevas preferencias
+            nueva_temperatura = st.number_input("Nueva Temperatura (ºC))", min_value=0.0, max_value=50.0, value=reset_pa.at[0, 'temperatura'])
+            nueva_humedad = st.number_input("Nueva Humedad (g/m^3)", min_value=0.0, max_value=100.0, value=reset_pa.at[0, 'humedad'])
+            nueva_luminosidad = st.number_input("Nueva Luminosidad (lx)", min_value=0.0, max_value=10000.0, value=reset_pa.at[0, 'luminosidad'])
+            
+            # Botón para enviar cambios
+            submit_button = st.form_submit_button(label="Actualizar Preferencias")
+            
+            if submit_button:
+                # Código para actualizar las preferencias en la base de datos
+                bdc.actualizar(
+                    f"UPDATE preferencias_atmosfericas "
+                    f"SET temperatura = {nueva_temperatura}, humedad = {nueva_humedad}, luminosidad = {nueva_luminosidad} "
+                    f"WHERE idprofesor = (SELECT idprofesor FROM profesor WHERE nombre = '{profesor_seleccionado}');"
+                )
+                st.success("Preferencias atmosféricas actualizadas exitosamente.")
+                st.experimental_rerun()
+
+    else: 
+        st.error(f"Error: {pa_seleccionada}")
