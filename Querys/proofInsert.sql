@@ -125,9 +125,9 @@ INSERT INTO visita (visita_entrada, visita_salida, idsalon, idprofesor) VALUES
 
 
 INSERT INTO visita (visita_entrada, visita_salida, idsalon, idprofesor) VALUES
-('2024-10-02 09:00', '2024-10-01 10:00', 1, 1),
-('2024-10-02 10:00', '2024-10-01 11:00', 1, 1),
-('2024-10-03 11:00', '2024-10-01 12:00', 1, 2);
+('2024-10-02 09:00', '2024-10-02 10:00', 1, 1),
+('2024-10-02 10:00', '2024-10-02 11:00', 1, 1),
+('2024-10-03 11:00', '2024-10-03 12:00', 1, 2);
 
 
 INSERT INTO condicion (temperatura, humedad, luminosidad, time_condicion, idsalon) VALUES
