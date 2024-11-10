@@ -12,7 +12,7 @@ col1, col2 = st.columns([1,1])
 
 
 with col1: 
-    st.image("/Users/diegoruiz/Desktop/DashboardUAM/dashboardUAM/img/CBI_Blanco/CBI_icono.png", use_column_width=True)
+    st.image("../img/CBI_Blanco/CBI_icono.png", use_column_width=True)
 with col2: 
     st.markdown("# Sensores Salones")
     st.markdown("Aplicación para monitoreo de salones")

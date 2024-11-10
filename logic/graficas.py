@@ -9,7 +9,8 @@ def ocupacion_salonesDB():
     st.markdown("------")
     st.markdown("## Ocupabilidad Salones")
     # Ejecutar la consulta y obtener los resultados en un DataFrame
-    salones = bdc.consultar("SELECT edificio, salon FROM sensor.salon;")
+    salones = bdc.consultar("SELECT edificio, salon FROM salon;")
+    print(salones)
 
     # Selector de Edificio
     edificio_seleccionado = st.selectbox("Selecciona un edificio", salones['edificio'].unique())

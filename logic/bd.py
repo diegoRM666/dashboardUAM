@@ -1,17 +1,24 @@
 import mysql.connector
 from mysql.connector import Error
 import pandas as pd
+import platform
 
 # Generar la conexión a la base de datos
 def conectarBase():
     """Establece la conexión a la base de datos y la devuelve."""
+    # Vamos a darle una contraseña distinta para cada sistema operativo
+    s_o = platform.system()
     try:
+        if s_o == "Darwin":
+            password = '15122121B'
+        else:
+            password = 'gogo219715122121B$'
         # Crear la conexión
         connection = mysql.connector.connect(
             host='localhost',       # Cambia por la IP o nombre de tu servidor MySQL
-            database='sensor',   # Nombre de la base de datos
-            user='root',      # Usuario de MySQL
-            password='15122121B' # Contraseña de MySQL
+            database='sensor',      # Nombre de la base de datos
+            user='root',            # Usuario de MySQL
+            password=password    # Contraseña de MySQL (corregido)
         )
         
         if connection.is_connected():
@@ -24,7 +31,6 @@ def conectarBase():
         return None
 
 # Hacer una consulta de datos
-# Cada consulta 
 def consultar(query):
     """Ejecuta una consulta en la base de datos y devuelve los resultados en un DataFrame."""
     connection = conectarBase()
@@ -46,6 +52,7 @@ def consultar(query):
         # Cerrar la conexión
         cerrarConexion(connection)
 
+# Ejecutar una actualización
 def actualizar(query):
     """Actualiza una o varias tablas en la base de datos y devuelve un mensaje de éxito o error."""
     connection = conectarBase()
@@ -68,9 +75,7 @@ def actualizar(query):
 
     finally:
         # Cierra la conexión si fue establecida
-        if connection:
-            cerrarConexion(connection)
-
+        cerrarConexion(connection)
 
 # Cerrar la conexión de BD
 def cerrarConexion(connection):
