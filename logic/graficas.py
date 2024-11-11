@@ -2,6 +2,7 @@ import bd as bdc
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
+from datetime import datetime, timedelta
 
 
 def ocupacion_salonesDB():
@@ -10,16 +11,47 @@ def ocupacion_salonesDB():
     st.markdown("## Ocupabilidad Salones")
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     salones = bdc.consultar("SELECT edificio, salon FROM salon;")
-    print(salones)
 
-    # Selector de Edificio
-    edificio_seleccionado = st.selectbox("Selecciona un edificio", salones['edificio'].unique())
+    # Unas columnas para organizar los containers. 
+    col01, col02= st.columns([1,1])
 
-    # Filtrar el DataFrame para mostrar solo los salones del edificio seleccionado
-    salones_disponibles = salones[salones['edificio'] == edificio_seleccionado]['salon']
+    with col01: 
+        # Selector de Edificio
+        edificio_seleccionado = st.selectbox("Selecciona un edificio", salones['edificio'].unique())
 
-    # Selector de Salón
-    salon_seleccionado = st.selectbox("Selecciona un salón", salones_disponibles)
+        # Filtrar el DataFrame para mostrar solo los salones del edificio seleccionado
+        salones_disponibles = salones[salones['edificio'] == edificio_seleccionado]['salon']
+
+        # Selector de Salón
+        salon_seleccionado = st.selectbox("Selecciona un salón", salones_disponibles)
+
+    #Otas columnas para darle mejor formato
+    col001, col002, col003 = st.columns([1,1,1])
+
+
+    with col003:
+        #Selector de rango de fechas
+        time_range = st.selectbox(
+        "",
+        ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
+        index=3
+        )
+
+    end_date = datetime.today()
+
+    if time_range == "1 Semana":
+        start_date = end_date - timedelta(days=7)
+        start_date_str = start_date.strftime('%Y-%m-%d %H:%M:%S')
+    elif time_range == "1 Mes":
+        start_date = end_date - timedelta(days=30)
+        start_date_str = start_date.strftime('%Y-%m-%d %H:%M:%S')
+    elif time_range == "3 Meses":
+        start_date = end_date - timedelta(days=90)
+        start_date_str = start_date.strftime('%Y-%m-%d %H:%M:%S')
+    elif time_range == "Todo el tiempo":
+        start_date = '2024-01-01 00:00:00'
+
+
     # Consulta para obtener los datos en un DataFrame
     ocupacion_salon = bdc.consultar(
         f"SELECT s.edificio AS edificio, s.salon AS salon, v.visita_entrada AS entrada, "
@@ -27,7 +59,8 @@ def ocupacion_salonesDB():
         f"FROM salon s "
         f"INNER JOIN visita v ON s.idsalon = v.idsalon "
         f"INNER JOIN profesor p ON v.idprofesor = p.idprofesor "
-        f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}';"
+        f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}' "
+        f"AND v.visita_entrada >= '{start_date}';"
     )
 
     #Generacion de columnas para que se vea como un dashboard
@@ -97,6 +130,9 @@ def ocupacion_salonesDB():
             # Mostrar la gráfica en Streamlit
             st.plotly_chart(fig_dona2, use_container_width=True)
         actualizacion_condicion(salon_seleccionado, edificio_seleccionado)
+    elif ocupacion_salon.empty:
+        st.warning(f"No hay datos para el tiempo referido")
+
     else:
         st.error(f"Error: {ocupacion_salon}")
 
