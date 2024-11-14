@@ -39,12 +39,13 @@ with col1:
              ("1 mes", "3 meses", "6 meses", "1 año"),
              index=3)
     
-if fecha_selected == '1 mes':
-    st.warning("Usted escogio un mes")
-elif fecha_selected == '3 meses':
-    st.warning("Usted escogio 3 meses")
-elif fecha_selected == '6 meses':
-    st.warning("Usted escogio 6 meses")
-elif fecha_selected == '1 año':
-    st.warning("Usted escogio 1 año")
-
+    if fecha_selected == '1 mes':
+        st.warning("Usted escogio un mes")
+    elif fecha_selected == '3 meses':
+        st.warning("Usted escogio 3 meses")
+    elif fecha_selected == '6 meses':
+        st.warning("Usted escogio 6 meses")
+    elif fecha_selected == '1 año':
+        st.warning("Usted escogio 1 año")
+        
+    
