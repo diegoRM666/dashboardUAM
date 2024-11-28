@@ -19,7 +19,6 @@ def transformar_fechas(time_range):
     
     return start_date
 
-
 def obtener_salon():
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     salones = bdc.consultar("SELECT edificio, salon FROM salon;")
