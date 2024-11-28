@@ -4,6 +4,10 @@ import streamlit as st
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from io import BytesIO
+
 
 def transformar_fechas(time_range):
     end_date = datetime.today()
@@ -14,44 +18,19 @@ def transformar_fechas(time_range):
         start_date = end_date - timedelta(days=30)
     elif time_range == "3 Meses":
         start_date = end_date - timedelta(days=90)
+    elif time_range == "6 Meses": 
+        start_date = end_date - timedelta(days=180)
     elif time_range == "Todo el tiempo":
         start_date = '2024-01-01 00:00:00'
     
     return start_date
 
-def obtener_salon():
+def obtener_salones():
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     salones = bdc.consultar("SELECT edificio, salon FROM salon;")
+    return salones
 
-    # Unas columnas para organizar los containers. 
-    col01, col02= st.columns([1,1])
-
-    with col01: 
-        # Selector de Edificio
-        edificio_seleccionado = st.selectbox("Selecciona un edificio", salones['edificio'].unique())
-
-        # Filtrar el DataFrame para mostrar solo los salones del edificio seleccionado
-        salones_disponibles = salones[salones['edificio'] == edificio_seleccionado]['salon']
-
-        # Selector de Salón
-        salon_seleccionado = st.selectbox("Selecciona un salón", salones_disponibles)
-
-    #Otras columnas para darle mejor formato
-    col001, col002, col003 = st.columns([1,1,1])
-    with col003:
-        #Selector de rango de fechas
-        time_range = st.selectbox(
-        "",
-        ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
-        index=3
-        )
-
-        start_date = transformar_fechas(time_range)
-
-    return salon_seleccionado, edificio_seleccionado, start_date
-
-def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date):
-
+def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date, end_date):
     # Consulta para obtener los datos en un DataFrame
     ocupacion_salon = bdc.consultar(
         f"SELECT s.edificio AS edificio, s.salon AS salon, v.visita_entrada AS entrada, "
@@ -60,7 +39,8 @@ def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date):
         f"INNER JOIN visita v ON s.idsalon = v.idsalon "
         f"INNER JOIN profesor p ON v.idprofesor = p.idprofesor "
         f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}' "
-        f"AND v.visita_entrada >= '{start_date}';"
+        f"AND v.visita_entrada >= '{start_date}' "
+        f"AND v.visita_entrada <= '{end_date}';"
     )
 
     #Generacion de columnas para que se vea como un dashboard
@@ -241,27 +221,10 @@ def condicion_salon (salon_seleccionado, edificio_seleccionado, start_date):
         st.warning("No hay datos para el tiempo referido")
         return None, None, None, pd.DataFrame()
 
-def obtener_profesor():
+def obtener_profesores():
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     profesores = bdc.consultar("SELECT nombre FROM sensor.profesor;")
-    # Selector de Edificio
-    profesor_seleccionado = st.selectbox("Selecciona un profesor", profesores['nombre'].unique())
-    #Seleccionemos un rango de fechas 
-
-    col001, col002, col003 = st.columns([1,1,1])
-    with col003:
-        #Selector de rango de fechas
-        time_range2 = st.selectbox(
-        "",
-        ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
-        index=3, 
-        key="tab_prof"
-        )
-
-        start_date2 = transformar_fechas(time_range2)
-
-    
-    return profesor_seleccionado, start_date2
+    return profesores
 
 def profesor_itinerario (profesor_seleccionado, start_date2): 
     profesor_it = bdc.consultar(
@@ -274,13 +237,11 @@ def profesor_itinerario (profesor_seleccionado, start_date2):
         )
     
     if isinstance(profesor_it, pd.DataFrame) and not profesor_it.empty:
-        return profesor_it
+        return profesor_it, len(profesor_it)
     else:
-        st.warning("No hay datos para el tiempo referido")
-        return pd.DataFrame()
+        return pd.DataFrame(), 0
 
 def obtener_preferencias(profesor_seleccionado):
-    # Condiciones preferidas
     pa_seleccionada = bdc.consultar(
         f"select p.nombre as nombre, rfid as RFID, pa.temperatura as temperatura, pa.humedad as humedad, pa.luminosidad as luminosidad "
         f"from profesor p inner join preferencias_atmosfericas pa on p.idprofesor = pa.idprofesor "
@@ -294,10 +255,30 @@ def obtener_preferencias(profesor_seleccionado):
         st.error(f"Error: {pa_seleccionada}")
 
 def cambiar_preferencias(nueva_temperatura, nueva_humedad, nueva_luminosidad, profesor_seleccionado):
-    # Crear formulario para actualizar preferencias
-    # Cóigo para actualizar las preferencias en la base de datos
     bdc.actualizar(
         f"UPDATE preferencias_atmosfericas "
         f"SET temperatura = {nueva_temperatura}, humedad = {nueva_humedad}, luminosidad = {nueva_luminosidad} "
         f"WHERE idprofesor = (SELECT idprofesor FROM profesor WHERE nombre = '{profesor_seleccionado}');"
     )
+
+def prueba_G():
+    # Crear una gráfica simple
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(
+        x=[1, 2, 3, 4],
+        y=[10, 11, 12, 13],
+        mode='lines+markers',
+        name='Datos'
+    ))
+
+    fig.update_layout(
+        title="Ejemplo de Gráfica",
+        xaxis_title="Eje X",
+        yaxis_title="Eje Y"
+    )
+
+    # Guardar la gráfica en un archivo PNG
+    fig.write_image("grafica_ejemplo.png")
+
+    print("Gráfica guardada como 'grafica_ejemplo.png'")

@@ -148,4 +148,8 @@ INSERT INTO condicion (temperatura, humedad, luminosidad, time_condicion, idsalo
 (23.6, 48.0, 360.0, '2024-10-05 08:00:00', 1);
 
 
+INSERT INTO sensor.visita (visita_entrada, visita_salida, idsalon, idprofesor) VALUES
+('2024-11-20 09:00', '2024-11-20 10:00', 2, 4),
+('2024-11-20 10:00', '2024-11-20 11:00', 2, 4),
+('2024-11-21 11:00', '2024-11-21 12:00', 2, 5);
 
