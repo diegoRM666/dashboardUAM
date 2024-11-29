@@ -1,11 +1,9 @@
-import streamlit as st
-import plotly.graph_objects as go
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
 import bd as bdc
-import pandas as pd
 import graficas as graph
+import subprocess
 
 # Estos son unos diccionarios que me sirven para convertir
 meses_nombres = {
@@ -28,7 +26,6 @@ def conv_nombre_mes(meses):
 
 # Extraccion de salones y edificos para ciertos meses: 
 def salon_edificio(meses, year):
-
     for mes in meses:
         salon_edificio = bdc.consultar(
             f"SELECT DISTINCT s.salon as salon,  s.edificio as edificio "
@@ -36,17 +33,12 @@ def salon_edificio(meses, year):
             f"where month(v.visita_entrada) >= {mes} and month(v.visita_entrada) < {mes+1} "
             f"and year(visita_entrada) = {year}; "
         )
-        print(salon_edificio)
-
         for _, row in salon_edificio.iterrows():
-            star_date = f"{year}-{mes}-01"
+            start_date = f"{year}-{mes}-01"
             end_date = f"{year}-{mes+1}-01"
-            fig_up, fig_ud = graph.uso_salon_dia(row["salon"], row["edificio"], star_date, end_date )        
-            nombre_archivo1 = f"UP-{year}-{mes}"
-            nombre_archivo2 = f"UD-{year}-{mes}"
-            guardar_grafico(fig_up, nombre_archivo1)
-            guardar_grafico(fig_ud, nombre_archivo2)
-    
+            salon, edificio = row["salon"], row["edificio"]
+
+            subprocess.run(["python3", "graP.py", f"{salon}", f"{edificio}", f"{start_date}", f"{end_date}",f"{mes}", f"{year}" ])
 
 
 # Extraccion de meses disponibles para reporte: 
@@ -65,10 +57,6 @@ def years_dispo():
     )
     years_dispo = years['years'].tolist()
     return years_dispo
-
-# Guardar gráfico como imagen
-def guardar_grafico(fig, nombre_archivo):
-    fig.write_image(nombre_archivo, format="png", engine="kaleido")
 
 # Generar el PDF
 def generar_pdf(nombre_imagen, mes):

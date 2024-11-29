@@ -2,11 +2,8 @@ import bd as bdc
 import graficas as graphLocal
 import pandas as pd
 import streamlit as st
-import os
 import reportes as rp
-import time
-from datetime import datetime, timedelta
-import subprocess
+from datetime import datetime
 
 
 
@@ -184,10 +181,7 @@ with tab3:
     if st.button("Generar Reporte"):
         if seleccionados:
             with st.spinner(f"Generando el reporte para: {', '.join(seleccionados)}..."):
-                #rp.salon_edificio(seleccionados_num, year_select)
-                #graphLocal.prueba_G()
-                subprocess.run(["python", "graphR.py"])
-
+                rp.salon_edificio(seleccionados_num,year_select)
                 st.success(f"Reporte Generado")
                 
         else:
