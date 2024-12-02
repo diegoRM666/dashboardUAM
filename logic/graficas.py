@@ -36,25 +36,31 @@ def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
         f"GROUP BY fecha;"
         )
     
-    # Graficación
-    fig_pol1 = go.Figure()
 
-    fig_pol1.add_trace(go.Scatter(
-        x=visitas['fecha'], 
-        y=visitas['visitas'],
-        mode='lines+markers',  # Modo "líneas y puntos"
-        name='Cantidad Queries',
-    ))
+    if isinstance(visitas, pd.DataFrame) and not visitas.empty:
+        # Graficación
+        fig_pol1 = go.Figure()
 
-    fig_pol1.update_layout(
-                title="Visitas en Salón",
-                xaxis_title="Fecha",
-                yaxis_title="Cantidad de Visitas",
-                paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
-                plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
-            )
-    
-    return fig_pol1
+        fig_pol1.add_trace(go.Scatter(
+            x=visitas['fecha'], 
+            y=visitas['visitas'],
+            mode='lines+markers',  # Modo "líneas y puntos"
+            name='Cantidad Queries',
+        ))
+
+        fig_pol1.update_layout(
+                    title="Visitas en Salón",
+                    xaxis_title="Fecha",
+                    yaxis_title="Cantidad de Visitas",
+                    paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
+                    plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
+                )
+        
+        return fig_pol1
+
+    elif visitas.empty:
+        st.warning(f"No hay datos para el tiempo referido")
+        return None
 
 
 def obtener_salones():

@@ -75,8 +75,9 @@ with tab1:
 
     ########### Número de Visitas ###########
     st.markdown("## Número de Visitas")
-    fig_visitas = graphLocal.obtener_visitas_tiempo(salon, edificio, fecha_inicio, datetime.today())
-    st.plotly_chart(fig_visitas, use_container_width=True)
+    visitas = graphLocal.obtener_visitas_tiempo(salon, edificio, fecha_inicio, datetime.today())
+    if visitas != None:
+        st.plotly_chart(visitas, use_container_width=True)
 
     ########### Condiciones de los salones ###########
     st.markdown("----")
@@ -167,29 +168,25 @@ with tab2:
 with tab3:
 
     st.markdown("## Generación de reportes")
-    year_dispo = rp.years_dispo()
-    year_select = st.selectbox("Seleccione un año", year_dispo)
-
-    meses_dispo_prev = rp.meses_dispo(year_select)
-    meses_dispo = rp.conv_mes_nombre(meses_dispo_prev)
-    seleccionados = []
 
     col1, col2 = st.columns([1,3])
 
     with col1:
-        for mes in meses_dispo:
-            if st.checkbox(mes, key=mes):
-                seleccionados.append(mes)
+        rango_reporte = st.selectbox(
+        "",
+        ("1 Mes", "3 Meses", "6 Meses")
+        )
 
-    seleccionados_num = rp.conv_nombre_mes(seleccionados)
-    
     if st.button("Generar Reporte"):
-        if seleccionados:
-            with st.spinner(f"Generando el reporte para: {', '.join(seleccionados)}..."):
-                rp.salon_edificio(seleccionados_num,year_select)
-                st.success(f"Reporte Generado")
+        with st.spinner(f"Generando el reporte para: {rango_reporte}..."):
+            rp.limpiarcarpetas()
+            nombreParcial = rango_reporte.replace(" ", "")
+            start_date = rp.transformar_fechas(rango_reporte)
+
+            rp.graficos_reporte(start_date,datetime.today(),nombreParcial)
+            
+
+            st.success(f"Reporte Generado")
                 
-        else:
-            st.warning("Por favor, selecciona al menos un mes para generar el reporte.")
         
     

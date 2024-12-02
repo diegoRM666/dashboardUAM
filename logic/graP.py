@@ -2,16 +2,14 @@ import plotly.graph_objects as go
 import sys
 import bd as bdc
 import pandas as pd
+from datetime import datetime, timedelta
 
 salon = sys.argv[1]
 edificio = sys.argv[2]
 start_date = sys.argv[3]
 end_date = sys.argv[4]
-mes = sys.argv[5]
-year = sys.argv[6]
+rango = sys.argv[5]
 
-print(sys.argv)
-# Extracción de información
 
 # Consulta para obtener los datos en un DataFrame
 ocupacion_salon = bdc.consultar(
@@ -84,7 +82,9 @@ if isinstance(ocupacion_salon, pd.DataFrame) and not ocupacion_salon.empty:
                         width = 500)
     
 
-    graName1 = f"UP{salon}-{mes}{year}.png" 
+    graName1 = f"UP{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
+    fig_dona.write_image(f"../img/pie/{graName1}")
+    graName2 = f"UD{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
     fig_dona.write_image(f"../img/pie/{graName1}")
     
 
