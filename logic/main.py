@@ -73,6 +73,11 @@ with tab1:
         with col2: 
             st.plotly_chart(uso_diario, use_container_width=True)
 
+    ########### Número de Visitas ###########
+    st.markdown("## Número de Visitas")
+    fig_visitas = graphLocal.obtener_visitas_tiempo(salon, edificio, fecha_inicio, datetime.today())
+    st.plotly_chart(fig_visitas, use_container_width=True)
+
     ########### Condiciones de los salones ###########
     st.markdown("----")
     st.markdown("## Condiciones Salón")

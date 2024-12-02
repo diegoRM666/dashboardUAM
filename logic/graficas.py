@@ -25,6 +25,38 @@ def transformar_fechas(time_range):
     
     return start_date
 
+def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
+    visitas = bdc.consultar(
+        f"SELECT DATE(v.visita_entrada) AS fecha, count(*) AS visitas "
+        f"FROM visita v INNER JOIN salon s ON v.idsalon = s.idsalon "
+        f"WHERE v.visita_entrada >= '{start_date}' "
+        f"AND v.visita_entrada < '{end_date}' "
+        f"AND s.salon = '{salon}' "
+        f"AND s.edificio = '{edificio}' "
+        f"GROUP BY fecha;"
+        )
+    
+    # Graficación
+    fig_pol1 = go.Figure()
+
+    fig_pol1.add_trace(go.Scatter(
+        x=visitas['fecha'], 
+        y=visitas['visitas'],
+        mode='lines+markers',  # Modo "líneas y puntos"
+        name='Cantidad Queries',
+    ))
+
+    fig_pol1.update_layout(
+                title="Visitas en Salón",
+                xaxis_title="Fecha",
+                yaxis_title="Cantidad de Visitas",
+                paper_bgcolor='rgba(0, 0, 0, 0)',  # Fondo transparente
+                plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
+            )
+    
+    return fig_pol1
+
+
 def obtener_salones():
     # Ejecutar la consulta y obtener los resultados en un DataFrame
     salones = bdc.consultar("SELECT edificio, salon FROM salon;")
