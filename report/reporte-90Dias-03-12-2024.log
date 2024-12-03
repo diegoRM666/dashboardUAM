@@ -1,0 +1,1170 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.16)  3 DEC 2024 01:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**../report/reporte-90Dias-03-12-2024.tex
+(../report/../report/reporte-90Dias-03-12-2024.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count196
+\Gm@cntv=\count197
+\c@Gm@tempcnt=\count198
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks20
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen151
+\captionmargin=\dimen152
+\caption@leftmargin=\dimen153
+\caption@rightmargin=\dimen154
+\caption@width=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count199
+\c@continuedfloat=\count266
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count267
+\l__pdf_internal_box=\box51
+)
+No file reporte-90Dias-03-12-2024.aux.
+\openout1 = `reporte-90Dias-03-12-2024.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count268
+\scratchdimen=\dimen159
+\scratchbox=\box52
+\nofMPsegments=\count269
+\nofMParguments=\count270
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count271
+\MPscratchDim=\dimen160
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 15.
+<../img/pie/UP101-90Dias-03-12-2024.png, id=1, 501.875pt x 501.875pt>
+File: ../img/pie/UP101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP101-90Dias-03-12-2024.png  used on input 
+line 22.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 24.
+<../img/pie/UD101-90Dias-03-12-2024.png, id=3, 501.875pt x 501.875pt>
+File: ../img/pie/UD101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD101-90Dias-03-12-2024.png  used on input 
+line 28.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP102-90Dias-03-12-2024.png, id=4, 501.875pt x 501.875pt>
+File: ../img/pie/UP102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP102-90Dias-03-12-2024.png  used on input 
+line 37.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD102-90Dias-03-12-2024.png, id=5, 501.875pt x 501.875pt>
+File: ../img/pie/UD102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD102-90Dias-03-12-2024.png  used on input 
+line 43.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+[1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../repo
+rt/../img/pie/UP101-90Dias-03-12-2024.png> <../report/../img/pie/UD101-90Dias-0
+3-12-2024.png>]
+<../img/pie/UP103-90Dias-03-12-2024.png, id=17, 501.875pt x 501.875pt>
+File: ../img/pie/UP103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP103-90Dias-03-12-2024.png  used on input 
+line 52.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD103-90Dias-03-12-2024.png, id=18, 501.875pt x 501.875pt>
+File: ../img/pie/UD103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD103-90Dias-03-12-2024.png  used on input 
+line 58.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP201-90Dias-03-12-2024.png, id=19, 501.875pt x 501.875pt>
+File: ../img/pie/UP201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP201-90Dias-03-12-2024.png  used on input 
+line 67.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD201-90Dias-03-12-2024.png, id=20, 501.875pt x 501.875pt>
+File: ../img/pie/UD201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD201-90Dias-03-12-2024.png  used on input 
+line 73.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [2 <../report/../img/pie/UP102-90Dias-03-12-2024.png> <../report/../img/pie/UD
+102-90Dias-03-12-2024.png> <../report/../img/pie/UP103-90Dias-03-12-2024.png> <
+../report/../img/pie/UD103-90Dias-03-12-2024.png>]
+<../img/pie/UP202-90Dias-03-12-2024.png, id=28, 501.875pt x 501.875pt>
+File: ../img/pie/UP202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP202-90Dias-03-12-2024.png  used on input 
+line 82.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD202-90Dias-03-12-2024.png, id=29, 501.875pt x 501.875pt>
+File: ../img/pie/UD202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD202-90Dias-03-12-2024.png  used on input 
+line 88.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP203-90Dias-03-12-2024.png, id=30, 501.875pt x 501.875pt>
+File: ../img/pie/UP203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP203-90Dias-03-12-2024.png  used on input 
+line 97.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD203-90Dias-03-12-2024.png, id=31, 501.875pt x 501.875pt>
+File: ../img/pie/UD203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD203-90Dias-03-12-2024.png  used on input 
+line 103.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [3 <../report/../img/pie/UP201-90Dias-03-12-2024.png> <../report/../img/pie/UD
+201-90Dias-03-12-2024.png> <../report/../img/pie/UP202-90Dias-03-12-2024.png> <
+../report/../img/pie/UD202-90Dias-03-12-2024.png>]
+<../img/pie/UP301-90Dias-03-12-2024.png, id=39, 501.875pt x 501.875pt>
+File: ../img/pie/UP301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP301-90Dias-03-12-2024.png  used on input 
+line 112.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD301-90Dias-03-12-2024.png, id=40, 501.875pt x 501.875pt>
+File: ../img/pie/UD301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD301-90Dias-03-12-2024.png  used on input 
+line 118.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP302-90Dias-03-12-2024.png, id=41, 501.875pt x 501.875pt>
+File: ../img/pie/UP302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP302-90Dias-03-12-2024.png  used on input 
+line 127.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD302-90Dias-03-12-2024.png, id=42, 501.875pt x 501.875pt>
+File: ../img/pie/UD302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD302-90Dias-03-12-2024.png  used on input 
+line 133.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [4 <../report/../img/pie/UP203-90Dias-03-12-2024.png> <../report/../img/pie/UD
+203-90Dias-03-12-2024.png> <../report/../img/pie/UP301-90Dias-03-12-2024.png> <
+../report/../img/pie/UD301-90Dias-03-12-2024.png>]
+<../img/pie/UP303-90Dias-03-12-2024.png, id=50, 501.875pt x 501.875pt>
+File: ../img/pie/UP303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP303-90Dias-03-12-2024.png  used on input 
+line 142.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD303-90Dias-03-12-2024.png, id=51, 501.875pt x 501.875pt>
+File: ../img/pie/UD303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD303-90Dias-03-12-2024.png  used on input 
+line 148.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP401-90Dias-03-12-2024.png, id=52, 501.875pt x 501.875pt>
+File: ../img/pie/UP401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP401-90Dias-03-12-2024.png  used on input 
+line 157.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD401-90Dias-03-12-2024.png, id=53, 501.875pt x 501.875pt>
+File: ../img/pie/UD401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD401-90Dias-03-12-2024.png  used on input 
+line 163.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [5 <../report/../img/pie/UP302-90Dias-03-12-2024.png> <../report/../img/pie/UD
+302-90Dias-03-12-2024.png> <../report/../img/pie/UP303-90Dias-03-12-2024.png> <
+../report/../img/pie/UD303-90Dias-03-12-2024.png>]
+<../img/pie/UP402-90Dias-03-12-2024.png, id=61, 501.875pt x 501.875pt>
+File: ../img/pie/UP402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP402-90Dias-03-12-2024.png  used on input 
+line 172.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD402-90Dias-03-12-2024.png, id=62, 501.875pt x 501.875pt>
+File: ../img/pie/UD402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD402-90Dias-03-12-2024.png  used on input 
+line 178.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP403-90Dias-03-12-2024.png, id=63, 501.875pt x 501.875pt>
+File: ../img/pie/UP403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP403-90Dias-03-12-2024.png  used on input 
+line 187.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD403-90Dias-03-12-2024.png, id=64, 501.875pt x 501.875pt>
+File: ../img/pie/UD403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD403-90Dias-03-12-2024.png  used on input 
+line 193.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [6 <../report/../img/pie/UP401-90Dias-03-12-2024.png> <../report/../img/pie/UD
+401-90Dias-03-12-2024.png> <../report/../img/pie/UP402-90Dias-03-12-2024.png> <
+../report/../img/pie/UD402-90Dias-03-12-2024.png>]
+<../img/pie/UP501-90Dias-03-12-2024.png, id=72, 501.875pt x 501.875pt>
+File: ../img/pie/UP501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP501-90Dias-03-12-2024.png  used on input 
+line 202.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD501-90Dias-03-12-2024.png, id=73, 501.875pt x 501.875pt>
+File: ../img/pie/UD501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD501-90Dias-03-12-2024.png  used on input 
+line 208.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP502-90Dias-03-12-2024.png, id=74, 501.875pt x 501.875pt>
+File: ../img/pie/UP502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP502-90Dias-03-12-2024.png  used on input 
+line 217.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD502-90Dias-03-12-2024.png, id=75, 501.875pt x 501.875pt>
+File: ../img/pie/UD502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD502-90Dias-03-12-2024.png  used on input 
+line 223.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [7 <../report/../img/pie/UP403-90Dias-03-12-2024.png> <../report/../img/pie/UD
+403-90Dias-03-12-2024.png> <../report/../img/pie/UP501-90Dias-03-12-2024.png> <
+../report/../img/pie/UD501-90Dias-03-12-2024.png>]
+<../img/pie/UP503-90Dias-03-12-2024.png, id=84, 501.875pt x 501.875pt>
+File: ../img/pie/UP503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP503-90Dias-03-12-2024.png  used on input 
+line 232.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD503-90Dias-03-12-2024.png, id=85, 501.875pt x 501.875pt>
+File: ../img/pie/UD503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD503-90Dias-03-12-2024.png  used on input 
+line 238.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP601-90Dias-03-12-2024.png, id=86, 501.875pt x 501.875pt>
+File: ../img/pie/UP601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP601-90Dias-03-12-2024.png  used on input 
+line 247.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD601-90Dias-03-12-2024.png, id=87, 501.875pt x 501.875pt>
+File: ../img/pie/UD601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD601-90Dias-03-12-2024.png  used on input 
+line 253.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [8 <../report/../img/pie/UP502-90Dias-03-12-2024.png> <../report/../img/pie/UD
+502-90Dias-03-12-2024.png> <../report/../img/pie/UP503-90Dias-03-12-2024.png> <
+../report/../img/pie/UD503-90Dias-03-12-2024.png>]
+<../img/pie/UP602-90Dias-03-12-2024.png, id=95, 501.875pt x 501.875pt>
+File: ../img/pie/UP602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP602-90Dias-03-12-2024.png  used on input 
+line 262.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD602-90Dias-03-12-2024.png, id=96, 501.875pt x 501.875pt>
+File: ../img/pie/UD602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD602-90Dias-03-12-2024.png  used on input 
+line 268.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP603-90Dias-03-12-2024.png, id=97, 501.875pt x 501.875pt>
+File: ../img/pie/UP603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP603-90Dias-03-12-2024.png  used on input 
+line 277.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD603-90Dias-03-12-2024.png, id=98, 501.875pt x 501.875pt>
+File: ../img/pie/UD603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD603-90Dias-03-12-2024.png  used on input 
+line 283.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [9 <../report/../img/pie/UP601-90Dias-03-12-2024.png> <../report/../img/pie/UD
+601-90Dias-03-12-2024.png> <../report/../img/pie/UP602-90Dias-03-12-2024.png> <
+../report/../img/pie/UD602-90Dias-03-12-2024.png>]
+<../img/pie/UP701-90Dias-03-12-2024.png, id=106, 501.875pt x 501.875pt>
+File: ../img/pie/UP701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP701-90Dias-03-12-2024.png  used on input 
+line 292.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD701-90Dias-03-12-2024.png, id=107, 501.875pt x 501.875pt>
+File: ../img/pie/UD701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD701-90Dias-03-12-2024.png  used on input 
+line 298.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP702-90Dias-03-12-2024.png, id=108, 501.875pt x 501.875pt>
+File: ../img/pie/UP702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UP702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UP702-90Dias-03-12-2024.png  used on input 
+line 307.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD702-90Dias-03-12-2024.png, id=109, 501.875pt x 501.875pt>
+File: ../img/pie/UD702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/pie/UD702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/pie/UD702-90Dias-03-12-2024.png  used on input 
+line 313.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+ [10 <../report/../img/pie/UP603-90Dias-03-12-2024.png> <../report/../img/pie/U
+D603-90Dias-03-12-2024.png> <../report/../img/pie/UP701-90Dias-03-12-2024.png> 
+<../report/../img/pie/UD701-90Dias-03-12-2024.png>]
+<../img/poli/VS101-90Dias-03-12-2024.png, id=117, 702.625pt x 501.875pt>
+File: ../img/poli/VS101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS101-90Dias-03-12-2024.png  used on input
+ line 322.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS102-90Dias-03-12-2024.png, id=118, 702.625pt x 501.875pt>
+File: ../img/poli/VS102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS102-90Dias-03-12-2024.png  used on input
+ line 331.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS103-90Dias-03-12-2024.png, id=119, 702.625pt x 501.875pt>
+File: ../img/poli/VS103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS103-90Dias-03-12-2024.png  used on input
+ line 340.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS201-90Dias-03-12-2024.png, id=120, 702.625pt x 501.875pt>
+File: ../img/poli/VS201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS201-90Dias-03-12-2024.png  used on input
+ line 349.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS202-90Dias-03-12-2024.png, id=121, 702.625pt x 501.875pt>
+File: ../img/poli/VS202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS202-90Dias-03-12-2024.png  used on input
+ line 358.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS203-90Dias-03-12-2024.png, id=122, 702.625pt x 501.875pt>
+File: ../img/poli/VS203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS203-90Dias-03-12-2024.png  used on input
+ line 367.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+
+[11 <../report/../img/poli/VS101-90Dias-03-12-2024.png> <../report/../img/pie/U
+P702-90Dias-03-12-2024.png> <../report/../img/pie/UD702-90Dias-03-12-2024.png>]
+[12 <../report/../img/poli/VS102-90Dias-03-12-2024.png> <../report/../img/poli/
+VS103-90Dias-03-12-2024.png> <../report/../img/poli/VS201-90Dias-03-12-2024.png
+>]
+<../img/poli/VS301-90Dias-03-12-2024.png, id=135, 702.625pt x 501.875pt>
+File: ../img/poli/VS301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS301-90Dias-03-12-2024.png  used on input
+ line 376.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS302-90Dias-03-12-2024.png, id=136, 702.625pt x 501.875pt>
+File: ../img/poli/VS302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS302-90Dias-03-12-2024.png  used on input
+ line 385.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS303-90Dias-03-12-2024.png, id=137, 702.625pt x 501.875pt>
+File: ../img/poli/VS303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS303-90Dias-03-12-2024.png  used on input
+ line 394.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS401-90Dias-03-12-2024.png, id=138, 702.625pt x 501.875pt>
+File: ../img/poli/VS401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS401-90Dias-03-12-2024.png  used on input
+ line 403.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS402-90Dias-03-12-2024.png, id=139, 702.625pt x 501.875pt>
+File: ../img/poli/VS402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS402-90Dias-03-12-2024.png  used on input
+ line 412.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS403-90Dias-03-12-2024.png, id=140, 702.625pt x 501.875pt>
+File: ../img/poli/VS403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS403-90Dias-03-12-2024.png  used on input
+ line 421.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS501-90Dias-03-12-2024.png, id=141, 702.625pt x 501.875pt>
+File: ../img/poli/VS501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS501-90Dias-03-12-2024.png  used on input
+ line 430.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS502-90Dias-03-12-2024.png, id=142, 702.625pt x 501.875pt>
+File: ../img/poli/VS502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS502-90Dias-03-12-2024.png  used on input
+ line 439.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS503-90Dias-03-12-2024.png, id=143, 702.625pt x 501.875pt>
+File: ../img/poli/VS503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS503-90Dias-03-12-2024.png  used on input
+ line 448.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS601-90Dias-03-12-2024.png, id=144, 702.625pt x 501.875pt>
+File: ../img/poli/VS601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS601-90Dias-03-12-2024.png  used on input
+ line 457.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS602-90Dias-03-12-2024.png, id=145, 702.625pt x 501.875pt>
+File: ../img/poli/VS602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS602-90Dias-03-12-2024.png  used on input
+ line 466.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS603-90Dias-03-12-2024.png, id=146, 702.625pt x 501.875pt>
+File: ../img/poli/VS603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS603-90Dias-03-12-2024.png  used on input
+ line 475.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS701-90Dias-03-12-2024.png, id=147, 702.625pt x 501.875pt>
+File: ../img/poli/VS701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS701-90Dias-03-12-2024.png  used on input
+ line 484.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/VS702-90Dias-03-12-2024.png, id=148, 702.625pt x 501.875pt>
+File: ../img/poli/VS702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/VS702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/VS702-90Dias-03-12-2024.png  used on input
+ line 493.
+(pdftex.def)             Requested size: 234.8775pt x 167.77115pt.
+<../img/poli/TS101-90Dias-03-12-2024.png, id=149, 702.625pt x 501.875pt>
+File: ../img/poli/TS101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS101-90Dias-03-12-2024.png  used on input
+ line 504.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS101-90Dias-03-12-2024.png, id=150, 702.625pt x 501.875pt>
+File: ../img/poli/HS101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS101-90Dias-03-12-2024.png  used on input
+ line 510.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+
+Overfull \vbox (514.92525pt too high) has occurred while \output is active []
+
+
+[13 <../report/../img/poli/VS202-90Dias-03-12-2024.png> <../report/../img/poli/
+VS203-90Dias-03-12-2024.png> <../report/../img/poli/TS101-90Dias-03-12-2024.png
+> <../report/../img/poli/HS101-90Dias-03-12-2024.png>] [14 <../report/../img/po
+li/VS301-90Dias-03-12-2024.png> <../report/../img/poli/VS302-90Dias-03-12-2024.
+png> <../report/../img/poli/VS303-90Dias-03-12-2024.png>] [15 <../report/../img
+/poli/VS401-90Dias-03-12-2024.png> <../report/../img/poli/VS402-90Dias-03-12-20
+24.png> <../report/../img/poli/VS403-90Dias-03-12-2024.png>] [16 <../report/../
+img/poli/VS501-90Dias-03-12-2024.png> <../report/../img/poli/VS502-90Dias-03-12
+-2024.png> <../report/../img/poli/VS503-90Dias-03-12-2024.png>] [17 <../report/
+../img/poli/VS601-90Dias-03-12-2024.png> <../report/../img/poli/VS602-90Dias-03
+-12-2024.png> <../report/../img/poli/VS603-90Dias-03-12-2024.png>] [18 <../repo
+rt/../img/poli/VS701-90Dias-03-12-2024.png> <../report/../img/poli/VS702-90Dias
+-03-12-2024.png>]
+<../img/poli/LS101-90Dias-03-12-2024.png, id=188, 702.625pt x 501.875pt>
+File: ../img/poli/LS101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS101-90Dias-03-12-2024.png  used on input
+ line 517.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG101-90Dias-03-12-2024.png, id=189, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG101-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG101-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG101-90Dias-03-12-2024.png  used on i
+nput line 523.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS102-90Dias-03-12-2024.png, id=190, 702.625pt x 501.875pt>
+File: ../img/poli/TS102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS102-90Dias-03-12-2024.png  used on input
+ line 532.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS102-90Dias-03-12-2024.png, id=191, 702.625pt x 501.875pt>
+File: ../img/poli/HS102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS102-90Dias-03-12-2024.png  used on input
+ line 538.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS102-90Dias-03-12-2024.png, id=192, 702.625pt x 501.875pt>
+File: ../img/poli/LS102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS102-90Dias-03-12-2024.png  used on input
+ line 545.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG102-90Dias-03-12-2024.png, id=193, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG102-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG102-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG102-90Dias-03-12-2024.png  used on i
+nput line 551.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS103-90Dias-03-12-2024.png, id=194, 702.625pt x 501.875pt>
+File: ../img/poli/TS103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS103-90Dias-03-12-2024.png  used on input
+ line 560.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS103-90Dias-03-12-2024.png, id=195, 702.625pt x 501.875pt>
+File: ../img/poli/HS103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS103-90Dias-03-12-2024.png  used on input
+ line 566.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [19 <../report/../img/poli/LS101-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG101-90Dias-03-12-2024.png> <../report/../img/poli/TS102-90Dias-03-12-202
+4.png> <../report/../img/poli/HS102-90Dias-03-12-2024.png> <../report/../img/po
+li/LS102-90Dias-03-12-2024.png> <../report/../img/tables/CAVG102-90Dias-03-12-2
+024.png>]
+<../img/poli/LS103-90Dias-03-12-2024.png, id=206, 702.625pt x 501.875pt>
+File: ../img/poli/LS103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS103-90Dias-03-12-2024.png  used on input
+ line 573.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG103-90Dias-03-12-2024.png, id=207, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG103-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG103-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG103-90Dias-03-12-2024.png  used on i
+nput line 579.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS201-90Dias-03-12-2024.png, id=208, 702.625pt x 501.875pt>
+File: ../img/poli/TS201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS201-90Dias-03-12-2024.png  used on input
+ line 588.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS201-90Dias-03-12-2024.png, id=209, 702.625pt x 501.875pt>
+File: ../img/poli/HS201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS201-90Dias-03-12-2024.png  used on input
+ line 594.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS201-90Dias-03-12-2024.png, id=210, 702.625pt x 501.875pt>
+File: ../img/poli/LS201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS201-90Dias-03-12-2024.png  used on input
+ line 601.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG201-90Dias-03-12-2024.png, id=211, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG201-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG201-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG201-90Dias-03-12-2024.png  used on i
+nput line 607.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [20 <../report/../img/poli/TS103-90Dias-03-12-2024.png> <../report/../img/poli
+/HS103-90Dias-03-12-2024.png> <../report/../img/poli/LS103-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG103-90Dias-03-12-2024.png> <../report/../img/po
+li/TS201-90Dias-03-12-2024.png> <../report/../img/poli/HS201-90Dias-03-12-2024.
+png>]
+<../img/poli/TS202-90Dias-03-12-2024.png, id=221, 702.625pt x 501.875pt>
+File: ../img/poli/TS202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS202-90Dias-03-12-2024.png  used on input
+ line 616.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS202-90Dias-03-12-2024.png, id=222, 702.625pt x 501.875pt>
+File: ../img/poli/HS202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS202-90Dias-03-12-2024.png  used on input
+ line 622.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS202-90Dias-03-12-2024.png, id=223, 702.625pt x 501.875pt>
+File: ../img/poli/LS202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS202-90Dias-03-12-2024.png  used on input
+ line 629.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG202-90Dias-03-12-2024.png, id=224, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG202-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG202-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG202-90Dias-03-12-2024.png  used on i
+nput line 635.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS203-90Dias-03-12-2024.png, id=225, 702.625pt x 501.875pt>
+File: ../img/poli/TS203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS203-90Dias-03-12-2024.png  used on input
+ line 644.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS203-90Dias-03-12-2024.png, id=226, 702.625pt x 501.875pt>
+File: ../img/poli/HS203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS203-90Dias-03-12-2024.png  used on input
+ line 650.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [21 <../report/../img/poli/LS201-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG201-90Dias-03-12-2024.png> <../report/../img/poli/TS202-90Dias-03-12-202
+4.png> <../report/../img/poli/HS202-90Dias-03-12-2024.png> <../report/../img/po
+li/LS202-90Dias-03-12-2024.png> <../report/../img/tables/CAVG202-90Dias-03-12-2
+024.png>]
+<../img/poli/LS203-90Dias-03-12-2024.png, id=236, 702.625pt x 501.875pt>
+File: ../img/poli/LS203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS203-90Dias-03-12-2024.png  used on input
+ line 657.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG203-90Dias-03-12-2024.png, id=237, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG203-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG203-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG203-90Dias-03-12-2024.png  used on i
+nput line 663.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS301-90Dias-03-12-2024.png, id=238, 702.625pt x 501.875pt>
+File: ../img/poli/TS301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS301-90Dias-03-12-2024.png  used on input
+ line 672.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS301-90Dias-03-12-2024.png, id=239, 702.625pt x 501.875pt>
+File: ../img/poli/HS301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS301-90Dias-03-12-2024.png  used on input
+ line 678.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS301-90Dias-03-12-2024.png, id=240, 702.625pt x 501.875pt>
+File: ../img/poli/LS301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS301-90Dias-03-12-2024.png  used on input
+ line 685.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG301-90Dias-03-12-2024.png, id=241, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG301-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG301-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG301-90Dias-03-12-2024.png  used on i
+nput line 691.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [22 <../report/../img/poli/TS203-90Dias-03-12-2024.png> <../report/../img/poli
+/HS203-90Dias-03-12-2024.png> <../report/../img/poli/LS203-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG203-90Dias-03-12-2024.png> <../report/../img/po
+li/TS301-90Dias-03-12-2024.png> <../report/../img/poli/HS301-90Dias-03-12-2024.
+png>]
+<../img/poli/TS302-90Dias-03-12-2024.png, id=251, 702.625pt x 501.875pt>
+File: ../img/poli/TS302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS302-90Dias-03-12-2024.png  used on input
+ line 700.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS302-90Dias-03-12-2024.png, id=252, 702.625pt x 501.875pt>
+File: ../img/poli/HS302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS302-90Dias-03-12-2024.png  used on input
+ line 706.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS302-90Dias-03-12-2024.png, id=253, 702.625pt x 501.875pt>
+File: ../img/poli/LS302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS302-90Dias-03-12-2024.png  used on input
+ line 713.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG302-90Dias-03-12-2024.png, id=254, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG302-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG302-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG302-90Dias-03-12-2024.png  used on i
+nput line 719.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS303-90Dias-03-12-2024.png, id=255, 702.625pt x 501.875pt>
+File: ../img/poli/TS303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS303-90Dias-03-12-2024.png  used on input
+ line 728.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS303-90Dias-03-12-2024.png, id=256, 702.625pt x 501.875pt>
+File: ../img/poli/HS303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS303-90Dias-03-12-2024.png  used on input
+ line 734.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [23 <../report/../img/poli/LS301-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG301-90Dias-03-12-2024.png> <../report/../img/poli/TS302-90Dias-03-12-202
+4.png> <../report/../img/poli/HS302-90Dias-03-12-2024.png> <../report/../img/po
+li/LS302-90Dias-03-12-2024.png> <../report/../img/tables/CAVG302-90Dias-03-12-2
+024.png>]
+<../img/poli/LS303-90Dias-03-12-2024.png, id=266, 702.625pt x 501.875pt>
+File: ../img/poli/LS303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS303-90Dias-03-12-2024.png  used on input
+ line 741.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG303-90Dias-03-12-2024.png, id=267, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG303-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG303-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG303-90Dias-03-12-2024.png  used on i
+nput line 747.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS401-90Dias-03-12-2024.png, id=268, 702.625pt x 501.875pt>
+File: ../img/poli/TS401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS401-90Dias-03-12-2024.png  used on input
+ line 756.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS401-90Dias-03-12-2024.png, id=269, 702.625pt x 501.875pt>
+File: ../img/poli/HS401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS401-90Dias-03-12-2024.png  used on input
+ line 762.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS401-90Dias-03-12-2024.png, id=270, 702.625pt x 501.875pt>
+File: ../img/poli/LS401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS401-90Dias-03-12-2024.png  used on input
+ line 769.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG401-90Dias-03-12-2024.png, id=271, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG401-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG401-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG401-90Dias-03-12-2024.png  used on i
+nput line 775.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [24 <../report/../img/poli/TS303-90Dias-03-12-2024.png> <../report/../img/poli
+/HS303-90Dias-03-12-2024.png> <../report/../img/poli/LS303-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG303-90Dias-03-12-2024.png> <../report/../img/po
+li/TS401-90Dias-03-12-2024.png> <../report/../img/poli/HS401-90Dias-03-12-2024.
+png>]
+<../img/poli/TS402-90Dias-03-12-2024.png, id=281, 702.625pt x 501.875pt>
+File: ../img/poli/TS402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS402-90Dias-03-12-2024.png  used on input
+ line 784.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS402-90Dias-03-12-2024.png, id=282, 702.625pt x 501.875pt>
+File: ../img/poli/HS402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS402-90Dias-03-12-2024.png  used on input
+ line 790.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS402-90Dias-03-12-2024.png, id=283, 702.625pt x 501.875pt>
+File: ../img/poli/LS402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS402-90Dias-03-12-2024.png  used on input
+ line 797.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG402-90Dias-03-12-2024.png, id=284, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG402-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG402-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG402-90Dias-03-12-2024.png  used on i
+nput line 803.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS403-90Dias-03-12-2024.png, id=285, 702.625pt x 501.875pt>
+File: ../img/poli/TS403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS403-90Dias-03-12-2024.png  used on input
+ line 812.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS403-90Dias-03-12-2024.png, id=286, 702.625pt x 501.875pt>
+File: ../img/poli/HS403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS403-90Dias-03-12-2024.png  used on input
+ line 818.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [25 <../report/../img/poli/LS401-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG401-90Dias-03-12-2024.png> <../report/../img/poli/TS402-90Dias-03-12-202
+4.png> <../report/../img/poli/HS402-90Dias-03-12-2024.png> <../report/../img/po
+li/LS402-90Dias-03-12-2024.png> <../report/../img/tables/CAVG402-90Dias-03-12-2
+024.png>]
+<../img/poli/LS403-90Dias-03-12-2024.png, id=297, 702.625pt x 501.875pt>
+File: ../img/poli/LS403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS403-90Dias-03-12-2024.png  used on input
+ line 825.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG403-90Dias-03-12-2024.png, id=298, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG403-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG403-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG403-90Dias-03-12-2024.png  used on i
+nput line 831.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS501-90Dias-03-12-2024.png, id=299, 702.625pt x 501.875pt>
+File: ../img/poli/TS501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS501-90Dias-03-12-2024.png  used on input
+ line 840.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS501-90Dias-03-12-2024.png, id=300, 702.625pt x 501.875pt>
+File: ../img/poli/HS501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS501-90Dias-03-12-2024.png  used on input
+ line 846.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS501-90Dias-03-12-2024.png, id=301, 702.625pt x 501.875pt>
+File: ../img/poli/LS501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS501-90Dias-03-12-2024.png  used on input
+ line 853.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG501-90Dias-03-12-2024.png, id=302, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG501-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG501-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG501-90Dias-03-12-2024.png  used on i
+nput line 859.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [26 <../report/../img/poli/TS403-90Dias-03-12-2024.png> <../report/../img/poli
+/HS403-90Dias-03-12-2024.png> <../report/../img/poli/LS403-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG403-90Dias-03-12-2024.png> <../report/../img/po
+li/TS501-90Dias-03-12-2024.png> <../report/../img/poli/HS501-90Dias-03-12-2024.
+png>]
+<../img/poli/TS502-90Dias-03-12-2024.png, id=312, 702.625pt x 501.875pt>
+File: ../img/poli/TS502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS502-90Dias-03-12-2024.png  used on input
+ line 868.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS502-90Dias-03-12-2024.png, id=313, 702.625pt x 501.875pt>
+File: ../img/poli/HS502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS502-90Dias-03-12-2024.png  used on input
+ line 874.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS502-90Dias-03-12-2024.png, id=314, 702.625pt x 501.875pt>
+File: ../img/poli/LS502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS502-90Dias-03-12-2024.png  used on input
+ line 881.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG502-90Dias-03-12-2024.png, id=315, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG502-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG502-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG502-90Dias-03-12-2024.png  used on i
+nput line 887.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS503-90Dias-03-12-2024.png, id=316, 702.625pt x 501.875pt>
+File: ../img/poli/TS503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS503-90Dias-03-12-2024.png  used on input
+ line 896.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS503-90Dias-03-12-2024.png, id=317, 702.625pt x 501.875pt>
+File: ../img/poli/HS503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS503-90Dias-03-12-2024.png  used on input
+ line 902.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+
+[27 <../report/../img/poli/LS501-90Dias-03-12-2024.png> <../report/../img/table
+s/CAVG501-90Dias-03-12-2024.png> <../report/../img/poli/TS502-90Dias-03-12-2024
+.png> <../report/../img/poli/HS502-90Dias-03-12-2024.png> <../report/../img/pol
+i/LS502-90Dias-03-12-2024.png> <../report/../img/tables/CAVG502-90Dias-03-12-20
+24.png>]
+<../img/poli/LS503-90Dias-03-12-2024.png, id=327, 702.625pt x 501.875pt>
+File: ../img/poli/LS503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS503-90Dias-03-12-2024.png  used on input
+ line 909.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG503-90Dias-03-12-2024.png, id=328, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG503-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG503-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG503-90Dias-03-12-2024.png  used on i
+nput line 915.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS601-90Dias-03-12-2024.png, id=329, 702.625pt x 501.875pt>
+File: ../img/poli/TS601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS601-90Dias-03-12-2024.png  used on input
+ line 924.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS601-90Dias-03-12-2024.png, id=330, 702.625pt x 501.875pt>
+File: ../img/poli/HS601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS601-90Dias-03-12-2024.png  used on input
+ line 930.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS601-90Dias-03-12-2024.png, id=331, 702.625pt x 501.875pt>
+File: ../img/poli/LS601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS601-90Dias-03-12-2024.png  used on input
+ line 937.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG601-90Dias-03-12-2024.png, id=332, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG601-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG601-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG601-90Dias-03-12-2024.png  used on i
+nput line 943.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [28 <../report/../img/poli/TS503-90Dias-03-12-2024.png> <../report/../img/poli
+/HS503-90Dias-03-12-2024.png> <../report/../img/poli/LS503-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG503-90Dias-03-12-2024.png> <../report/../img/po
+li/TS601-90Dias-03-12-2024.png> <../report/../img/poli/HS601-90Dias-03-12-2024.
+png>]
+<../img/poli/TS602-90Dias-03-12-2024.png, id=342, 702.625pt x 501.875pt>
+File: ../img/poli/TS602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS602-90Dias-03-12-2024.png  used on input
+ line 952.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS602-90Dias-03-12-2024.png, id=343, 702.625pt x 501.875pt>
+File: ../img/poli/HS602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS602-90Dias-03-12-2024.png  used on input
+ line 958.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS602-90Dias-03-12-2024.png, id=344, 702.625pt x 501.875pt>
+File: ../img/poli/LS602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS602-90Dias-03-12-2024.png  used on input
+ line 965.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG602-90Dias-03-12-2024.png, id=345, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG602-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG602-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG602-90Dias-03-12-2024.png  used on i
+nput line 971.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS603-90Dias-03-12-2024.png, id=346, 702.625pt x 501.875pt>
+File: ../img/poli/TS603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS603-90Dias-03-12-2024.png  used on input
+ line 980.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS603-90Dias-03-12-2024.png, id=347, 702.625pt x 501.875pt>
+File: ../img/poli/HS603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS603-90Dias-03-12-2024.png  used on input
+ line 986.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [29 <../report/../img/poli/LS601-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG601-90Dias-03-12-2024.png> <../report/../img/poli/TS602-90Dias-03-12-202
+4.png> <../report/../img/poli/HS602-90Dias-03-12-2024.png> <../report/../img/po
+li/LS602-90Dias-03-12-2024.png> <../report/../img/tables/CAVG602-90Dias-03-12-2
+024.png>]
+<../img/poli/LS603-90Dias-03-12-2024.png, id=357, 702.625pt x 501.875pt>
+File: ../img/poli/LS603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS603-90Dias-03-12-2024.png  used on input
+ line 993.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG603-90Dias-03-12-2024.png, id=358, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG603-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG603-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG603-90Dias-03-12-2024.png  used on i
+nput line 999.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/TS701-90Dias-03-12-2024.png, id=359, 702.625pt x 501.875pt>
+File: ../img/poli/TS701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS701-90Dias-03-12-2024.png  used on input
+ line 1008.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS701-90Dias-03-12-2024.png, id=360, 702.625pt x 501.875pt>
+File: ../img/poli/HS701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS701-90Dias-03-12-2024.png  used on input
+ line 1014.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS701-90Dias-03-12-2024.png, id=361, 702.625pt x 501.875pt>
+File: ../img/poli/LS701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS701-90Dias-03-12-2024.png  used on input
+ line 1021.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG701-90Dias-03-12-2024.png, id=362, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG701-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG701-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG701-90Dias-03-12-2024.png  used on i
+nput line 1027.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [30 <../report/../img/poli/TS603-90Dias-03-12-2024.png> <../report/../img/poli
+/HS603-90Dias-03-12-2024.png> <../report/../img/poli/LS603-90Dias-03-12-2024.pn
+g> <../report/../img/tables/CAVG603-90Dias-03-12-2024.png> <../report/../img/po
+li/TS701-90Dias-03-12-2024.png> <../report/../img/poli/HS701-90Dias-03-12-2024.
+png>]
+<../img/poli/TS702-90Dias-03-12-2024.png, id=372, 702.625pt x 501.875pt>
+File: ../img/poli/TS702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/TS702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/TS702-90Dias-03-12-2024.png  used on input
+ line 1036.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/HS702-90Dias-03-12-2024.png, id=373, 702.625pt x 501.875pt>
+File: ../img/poli/HS702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/HS702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/HS702-90Dias-03-12-2024.png  used on input
+ line 1042.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/LS702-90Dias-03-12-2024.png, id=374, 702.625pt x 501.875pt>
+File: ../img/poli/LS702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/poli/LS702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/poli/LS702-90Dias-03-12-2024.png  used on input
+ line 1049.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/tables/CAVG702-90Dias-03-12-2024.png, id=375, 702.625pt x 501.875pt>
+File: ../img/tables/CAVG702-90Dias-03-12-2024.png Graphic file (type png)
+<use ../img/tables/CAVG702-90Dias-03-12-2024.png>
+Package pdftex.def Info: ../img/tables/CAVG702-90Dias-03-12-2024.png  used on i
+nput line 1055.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [31 <../report/../img/poli/LS701-90Dias-03-12-2024.png> <../report/../img/tabl
+es/CAVG701-90Dias-03-12-2024.png> <../report/../img/poli/TS702-90Dias-03-12-202
+4.png> <../report/../img/poli/HS702-90Dias-03-12-2024.png> <../report/../img/po
+li/LS702-90Dias-03-12-2024.png> <../report/../img/tables/CAVG702-90Dias-03-12-2
+024.png>] (../report/reporte-90Dias-03-12-2024.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 4217 strings out of 474116
+ 101965 string characters out of 5743682
+ 1936187 words of memory out of 5000000
+ 26595 multiletter control sequences out of 15000+600000
+ 561709 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,7n,65p,287b,299s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on ../report/reporte-90Dias-03-12-2024.pdf (31 pages, 2341773 by
+tes).
+PDF statistics:
+ 405 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 701 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -135,7 +135,8 @@ def insercion_graLv(salon, edificio, rango):
     image1_path = f"../img/poli/VS{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
 
     texto_imagen = r"""
-    \begin{figure}[h!]
+    \section{""" + edificio +r""", Salon: """+ salon +r"""}
+    \begin{figure}
         \centering
         \includegraphics[width=0.5\textwidth]{""" + image1_path + r"""}
         \caption{Visitas por Salon}
@@ -151,6 +152,7 @@ def insercion_graLc(salon, edificio, rango):
     image4_path = f"../img/tables/CAVG{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
 
     texto_imagen = r"""
+    \section{""" + edificio +r""", Salon: """+ salon +r"""}
     \noindent
     \begin{minipage}{0.48\textwidth}
         \centering

@@ -36,6 +36,7 @@ with tab1:
     # Ejecutar la consulta y obtener los resultados en un DataFrame 
     salones = graphLocal.obtener_salones()
 
+
     # Desplegar los selectbox
     col01, col02= st.columns([1,1])
 

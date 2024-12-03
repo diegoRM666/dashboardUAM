@@ -4,9 +4,6 @@ import streamlit as st
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
-from io import BytesIO
 
 
 def transformar_fechas(time_range):

@@ -1,7 +1,17 @@
 #!/bin/bash
 
+# Detectar el sistema operativo y establecer la ruta del proyecto
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    ruta_proyecto="/home/mrcubeoner/Desktop/DashboardUAM/dashboardUAM"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    ruta_proyecto="/Users/diegoruiz/Desktop/DashboardUAM/dashboardUAM"
+else
+    echo "Error: Sistema operativo no soportado"
+    exit 1
+fi
+
 # Cambiar al directorio del proyecto
-cd /home/mrcubeoner/Desktop/DashboardUAM/dashboardUAM || { echo "Error: No se puede acceder a /home/mrcubeoner/Desktop/DashboardUAM/dashboardUAM"; exit 1; }
+cd "$ruta_proyecto" || { echo "Error: No se puede acceder a $ruta_proyecto"; exit 1; }
 
 # Agregar cambios
 git add .
