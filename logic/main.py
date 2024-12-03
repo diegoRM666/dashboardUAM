@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 import reportes as rp
 from datetime import datetime
+import profesores as pr
 
 
 
@@ -106,7 +107,7 @@ with tab1:
 with tab2:
     st.markdown("## Información profesores")
     ################ Despliegue de Selectbox ################
-    profesores = graphLocal.obtener_profesores()
+    profesores = pr.obtener_profesores()
     # Selector de Edificio
     profesor_seleccionado = st.selectbox("Selecciona un profesor", profesores['nombre'].unique())
     #Seleccionemos un rango de fechas 
@@ -123,8 +124,8 @@ with tab2:
 
         start_date2 = graphLocal.transformar_fechas(time_range2)
 
-    preferencias = graphLocal.obtener_preferencias(profesor_seleccionado)
-    profesor_it, numero_visitas = graphLocal.profesor_itinerario(profesor_seleccionado, start_date2)
+    preferencias = pr.obtener_preferencias(profesor_seleccionado)
+    profesor_it, numero_visitas = pr.profesor_itinerario(profesor_seleccionado, start_date2)
 
 
     col1,col2 = st.columns(2)
@@ -151,7 +152,7 @@ with tab2:
             # Botón para enviar cambios
             submit_button = st.form_submit_button(label="Actualizar Preferencias")
             if submit_button:
-                graphLocal.cambiar_preferencias(nueva_temperatura, nueva_humedad, nueva_luminosidad, profesor_seleccionado)
+                pr.cambiar_preferencias(nueva_temperatura, nueva_humedad, nueva_luminosidad, profesor_seleccionado)
                 st.success("Preferencias atmosféricas actualizadas exitosamente.")
                 st.rerun()
 
