@@ -85,7 +85,7 @@ if isinstance(ocupacion_salon, pd.DataFrame) and not ocupacion_salon.empty:
     graName1 = f"UP{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
     fig_dona.write_image(f"../img/pie/{graName1}")
     graName2 = f"UD{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
-    fig_dona.write_image(f"../img/pie/{graName1}")
+    fig_dona2.write_image(f"../img/pie/{graName2}")
     
 
 

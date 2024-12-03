@@ -1,32 +1,30 @@
-import mysql.connector
-from mysql.connector import Error
 import pandas as pd
+from sqlalchemy import create_engine
 import platform
 
 # Generar la conexión a la base de datos
 def conectarBase():
-    """Establece la conexión a la base de datos y la devuelve."""
-    # Vamos a darle una contraseña distinta para cada sistema operativo
+    """Establece la conexión a la base de datos y la devuelve usando SQLAlchemy."""
     s_o = platform.system()
     try:
         if s_o == "Darwin":
             password = '15122121B'
         else:
             password = 'gogo219715122121B$'
-        # Crear la conexión
-        connection = mysql.connector.connect(
-            host='localhost',       # Cambia por la IP o nombre de tu servidor MySQL
-            database='sensor',      # Nombre de la base de datos
-            user='root',            # Usuario de MySQL
-            password=password    # Contraseña de MySQL (corregido)
-        )
         
-        if connection.is_connected():
-            db_info = connection.get_server_info()
-            print("Conectado a MySQL Server versión", db_info)
-            return connection
+        # Crear la URL de conexión de SQLAlchemy
+        db_url = f"mysql+pymysql://root:{password}@localhost/sensor"
+        
+        # Crear el motor de conexión con SQLAlchemy
+        engine = create_engine(db_url)
 
-    except Error as e:
+        # Conectar al motor (esto también verifica si la conexión es válida)
+        connection = engine.connect()
+        
+        print("Conectado a la base de datos MySQL con SQLAlchemy.")
+        return connection
+
+    except Exception as e:
         print("Error al conectar a MySQL:", e)
         return None
 
@@ -39,11 +37,11 @@ def consultar(query):
         return "No se pudo establecer la conexión a la base de datos."
 
     try:
-        # Ejecutar la consulta y obtener los resultados en un DataFrame
+        # Ejecutar la consulta y obtener los resultados en un DataFrame usando pandas y SQLAlchemy
         df = pd.read_sql(query, connection)
         return df
 
-    except Error as e:
+    except Exception as e:
         print("Error al ejecutar la consulta:", e)
         msj = f"Error al ejecutar la consulta: {e}"
         return msj
@@ -52,34 +50,9 @@ def consultar(query):
         # Cerrar la conexión
         cerrarConexion(connection)
 
-# Ejecutar una actualización
-def actualizar(query):
-    """Actualiza una o varias tablas en la base de datos y devuelve un mensaje de éxito o error."""
-    connection = conectarBase()
-    if connection is None:
-        print("No se pudo establecer la conexión a la base de datos.")
-        return "No se pudo establecer la conexión a la base de datos."
-    
-    try:
-        # Ejecuta la actualización
-        cursor = connection.cursor()
-        cursor.execute(query)
-        connection.commit()  # Asegura que la actualización se guarde en la BD
-        msj = "Actualización exitosa."
-        return msj
-
-    except Error as e:
-        print("Error al ejecutar la actualización:", e)
-        msj = f"Error al ejecutar la actualización: {e}"
-        return msj
-
-    finally:
-        # Cierra la conexión si fue establecida
-        cerrarConexion(connection)
-
 # Cerrar la conexión de BD
 def cerrarConexion(connection):
     """Cierra la conexión a la base de datos."""
-    if connection is not None and connection.is_connected():
+    if connection is not None:
         connection.close()
         print("Conexión cerrada")

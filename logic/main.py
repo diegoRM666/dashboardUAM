@@ -54,7 +54,7 @@ with tab1:
     with col003:
         #Selector de rango de fechas
         time_range = st.selectbox(
-        "",
+        "Selecciona un rango",
         ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
         index=3
         )
@@ -116,7 +116,7 @@ with tab2:
     with col003:
         #Selector de rango de fechas
         time_range2 = st.selectbox(
-        "",
+        "Selecciona un rango",
         ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
         index=3, 
         key="tab_prof"
@@ -174,8 +174,8 @@ with tab3:
 
     with col1:
         rango_reporte = st.selectbox(
-        "",
-        ("1 Mes", "3 Meses", "6 Meses")
+        "Selecciona un rango",
+        ("30 Dias", "90 Dias", "180 Dias")
         )
 
     if st.button("Generar Reporte"):
@@ -184,10 +184,14 @@ with tab3:
             nombreParcial = rango_reporte.replace(" ", "")
             start_date = rp.transformar_fechas(rango_reporte)
 
-            rp.graficos_reporte(start_date,datetime.today(),nombreParcial)
-            
+            texto1, texto2, texto3 = rp.graficos_reporte(start_date,datetime.today(),nombreParcial)
 
-            st.success(f"Reporte Generado")
+            tex_img = f"{texto1}\n{texto2}\n{texto3}"
+
+            tex_path = rp.crear_tex(rango_reporte,nombreParcial, start_date.strftime("%d-%m-%Y"), datetime.today().strftime("%d-%m-%Y"),tex_img)
+            rp.compilar_tex(tex_path)
+
+            st.success(f"Reporte generado para los ultimos {rango_reporte}... ")
                 
         
     
