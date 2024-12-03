@@ -1,6 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 import platform
+from sqlalchemy.sql import text
 
 # Generar la conexión a la base de datos
 def conectarBase():
@@ -27,6 +28,31 @@ def conectarBase():
     except Exception as e:
         print("Error al conectar a MySQL:", e)
         return None
+
+# Ejecutar una actualización
+def actualizar(query):
+    """Actualiza una o varias tablas en la base de datos y devuelve un mensaje de éxito o error."""
+    connection = conectarBase()
+    if connection is None:
+        print("No se pudo establecer la conexión a la base de datos.")
+        return "No se pudo establecer la conexión a la base de datos."
+    
+    try:
+        # Ejecuta la consulta de actualización
+        with connection.begin():  # Asegura una transacción
+            connection.execute(text(query))  # Envolver en 'text'
+        msj = "Actualización exitosa."
+        return msj
+
+    except Exception as e:
+        print("Error al ejecutar la actualización:", e)
+        msj = f"Error al ejecutar la actualización: {e}"
+        return msj
+
+    finally:
+        # Cierra la conexión si fue establecida
+        cerrarConexion(connection)
+
 
 # Hacer una consulta de datos
 def consultar(query):
