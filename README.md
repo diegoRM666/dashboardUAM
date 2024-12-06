@@ -38,7 +38,7 @@ Se pensó en el uso de un dashboard que mostrará la información discriminando 
 
 Se generan dos gráficas de pastel para determina las horas que uso el profesor el salón y otra que determina las horas que se uso el salón por día, ambas en un rango de tiempo establecido. 
 
-![[db_1.png]]
+![Dashboard](db_1.png)
 
 
 
