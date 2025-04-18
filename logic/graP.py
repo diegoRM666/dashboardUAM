@@ -3,6 +3,7 @@ import sys
 import bd as bdc
 import pandas as pd
 from datetime import datetime, timedelta
+import threading
 
 salon = sys.argv[1]
 edificio = sys.argv[2]
@@ -10,6 +11,8 @@ start_date = sys.argv[3]
 end_date = sys.argv[4]
 rango = sys.argv[5]
 
+def save_image(fig, path):
+    fig.write_image(path)
 
 # Consulta para obtener los datos en un DataFrame
 ocupacion_salon = bdc.consultar(
@@ -82,10 +85,20 @@ if isinstance(ocupacion_salon, pd.DataFrame) and not ocupacion_salon.empty:
                         width = 500)
     
     graName1 = f"UP{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
-    fig_dona.write_image(f"../img/pie/{graName1}")
-    graName2 = f"UD{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
-    fig_dona2.write_image(f"../img/pie/{graName2}")
-    
+    graName2 = f"UD{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png"
+
+    # Crear hilos para cada imagen
+    thread1 = threading.Thread(target=save_image, args=(fig_dona, f"../img/pie/{graName1}"))
+    thread2 = threading.Thread(target=save_image, args=(fig_dona2, f"../img/pie/{graName2}"))
+
+    # Iniciar los hilos
+    thread1.start()
+    thread2.start()
+
+    # Esperar a que los hilos terminen
+    thread1.join()
+    thread2.join()
+        
 
 
 

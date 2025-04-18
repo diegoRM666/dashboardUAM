@@ -4,12 +4,15 @@ import pandas as pd
 import streamlit as st
 import reportes as rp
 from datetime import datetime
+import time
 import profesores as pr
+from streamlit_autorefresh import st_autorefresh
+import threading
 
-
+st.set_page_config(layout="wide")
 
 ############################## Titulo ##############################
-st.set_page_config(layout="wide")
+
 col1, col2, col3, col4 = st.columns(4)
 
 
@@ -56,14 +59,33 @@ with tab1:
         #Selector de rango de fechas
         time_range = st.selectbox(
         "Selecciona un rango",
-        ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo"),
+        ("1 Semana", "1 Mes", "3 Meses", "Todo el tiempo", "Personalizado"),
         index=3
         )
 
-        fecha_inicio = graphLocal.transformar_fechas(time_range)
+        # Si tenemos un tiempo personalizado
+        if time_range == "Personalizado": 
+            fecha_1, fecha_2 = graphLocal.obtener_fechas_inicio_fin_personalizado()
+            fecha_inicio_prev=st.text_input("Inicio (AAAA-MM-DD):", value=f"{fecha_1} ")
+            fecha_fin_prev=st.text_input("Fin (AAAA-MM-DD):", value=f"{fecha_2}")
+
+            # Comprobamos que ambas fechas sean validas
+            if fecha_inicio_prev == "" or fecha_fin_prev == "":
+                # Si una no cumple entonces se procede con mandar valores sin datos
+                st.error("Especifique ambas fechas")
+                fecha_inicio ="9999-12-31"
+                fecha_fin="9999-12-31"
+
+        # En caso de fechas validas, entonces damos las fechas que se ingresaron
+            else:
+                fecha_inicio=fecha_inicio_prev
+                fecha_fin=fecha_fin_prev
+        else:
+            fecha_inicio = graphLocal.transformar_fechas(time_range)
+            fecha_fin = datetime.today()
 
     # Generamos las graficas y las desplegamos
-    uso_salon, uso_diario= graphLocal.uso_salon_dia(salon, edificio, fecha_inicio, datetime.today())
+    uso_salon, uso_diario= graphLocal.uso_salon_dia(salon, edificio, fecha_inicio, fecha_fin)
 
     # Hacemos columnas para que se vea mejor
     col1, col2 = st.columns(2)
@@ -77,9 +99,19 @@ with tab1:
 
     ########### Número de Visitas ###########
     st.markdown("## Número de Visitas")
-    visitas = graphLocal.obtener_visitas_tiempo(salon, edificio, fecha_inicio, datetime.today())
-    if visitas != None:
-        st.plotly_chart(visitas, use_container_width=True)
+    fig_visitas, visitas= graphLocal.obtener_visitas_tiempo(salon, edificio, fecha_inicio, fecha_fin)
+
+    # Hacemos columnas para que se aprecie mejor
+    col1, col2 = st.columns(2)
+
+    if fig_visitas != None or not visitas.empty:
+        with col1:
+            st.plotly_chart(fig_visitas, use_container_width=True)
+        with col2:
+            st.table(visitas)
+    
+    ########### Promedio de Visitas ###########
+
 
     ########### Condiciones de los salones ###########
     st.markdown("----")
@@ -101,6 +133,7 @@ with tab1:
             st.plotly_chart(fig_lum, use_container_width=True)
         with col12:
             st.table(promedios) 
+
 
 
 
@@ -147,7 +180,7 @@ with tab2:
             
             # Campos de entrada para nuevas preferencias
             nueva_temperatura = st.number_input("Nueva Temperatura (ºC)", min_value=0.0, max_value=50.0, value=preferencias.at[0, 'temperatura'])
-            nueva_humedad = st.number_input("Nueva Humedad (g/m³)", min_value=0.0, max_value=100.0, value=preferencias.at[0, 'humedad'])
+            nueva_humedad = st.number_input("Nueva Humedad (%)", min_value=0.0, max_value=100.0, value=preferencias.at[0, 'humedad'])
             nueva_luminosidad = st.number_input("Nueva Luminosidad (lx)", min_value=0.0, max_value=10000.0, value=preferencias.at[0, 'luminosidad'])
 
             # Botón para enviar cambios
@@ -155,7 +188,16 @@ with tab2:
             if submit_button:
                 pr.cambiar_preferencias(nueva_temperatura, nueva_humedad, nueva_luminosidad, profesor_seleccionado)
                 st.success("Preferencias atmosféricas actualizadas exitosamente.")
+                time.sleep(5)
                 st.rerun()
+
+        # Botón para regresar a los valores default
+        default_button = st.button(label="Valores Default", use_container_width=True)
+        if default_button:
+            pr.cambiar_preferencias("22.00", "50.00", "300.00", profesor_seleccionado)
+            st.success("Preferencias atmosféricas actualizadas a default")
+            time.sleep(5)
+            st.rerun()
 
     ########### Itinerario Profesores ###########
     st.markdown("### Itinerario")
@@ -187,12 +229,9 @@ with tab3:
 
             texto1, texto2, texto3 = rp.graficos_reporte(start_date,datetime.today(),nombreParcial)
 
-            tex_img = f"{texto1}\n{texto2}\n{texto3}"
+            tex_img = f"{texto1}\n{texto3}\n{texto2}"
 
             tex_path = rp.crear_tex(rango_reporte,nombreParcial, start_date.strftime("%d-%m-%Y"), datetime.today().strftime("%d-%m-%Y"),tex_img)
             rp.compilar_tex(tex_path)
 
             st.success(f"Reporte generado para los ultimos {rango_reporte}... ")
-                
-        
-    

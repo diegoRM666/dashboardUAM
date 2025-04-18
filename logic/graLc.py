@@ -3,6 +3,10 @@ import sys
 import bd as bdc
 import pandas as pd
 from datetime import datetime, timedelta
+import threading
+
+def save_image(fig, path):
+    fig.write_image(path)
 
 salon = sys.argv[1]
 edificio = sys.argv[2]
@@ -126,7 +130,21 @@ if isinstance(condiciones_salon, pd.DataFrame) and not condiciones_salon.empty:
     graName2 = f"HS{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
     graName3 = f"LS{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
     tableName = f"CAVG{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
-    fig_temperatura.write_image(f"../img/poli/{graName1}")
-    fig_humedad.write_image(f"../img/poli/{graName2}")
-    fig_luminosidad.write_image(f"../img/poli/{graName3}")
-    tabla_avg.write_image(f"../img/tables/{tableName}")
+
+    # Crear hilos para cada instrucción
+    thread1 = threading.Thread(target=save_image, args=(fig_temperatura, f"../img/poli/{graName1}"))
+    thread2 = threading.Thread(target=save_image, args=(fig_humedad, f"../img/poli/{graName2}"))
+    thread3 = threading.Thread(target=save_image, args=(fig_luminosidad, f"../img/poli/{graName3}"))
+    thread4 = threading.Thread(target=save_image, args=(tabla_avg, f"../img/tables/{tableName}"))
+
+    # Iniciar los hilos
+    thread1.start()
+    thread2.start()
+    thread3.start()
+    thread4.start()
+
+    # Esperar a que todos los hilos terminen
+    thread1.join()
+    thread2.join()
+    thread3.join()
+    thread4.join()

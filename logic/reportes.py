@@ -21,6 +21,8 @@ def transformar_fechas(time_range):
         start_date = end_date - timedelta(days=90)
     elif time_range == "180 Dias": 
         start_date = end_date - timedelta(days=180)
+    else:
+        start_date = end_date - timedelta(days=time_range)
     
     return start_date
 
@@ -34,7 +36,7 @@ def generar_grafico(start_date, end_date, time_range, script_name, salon_edifici
         for _, row in salon_edificio.iterrows():
             salon, edificio = row["salon"], row["edificio"]
             subprocess.run(["python3", script_name, f"{salon}", f"{edificio}", f"{start_date}", f"{end_date}", f"{time_range}"])
-            # Aqui poodriamos hacer la escritura de las imagenes. 
+            # Aqui podriamos hacer la escritura de las imagenes. 
             if script_name == "graP.py":
                 texto = texto + "\n"+ insercion_graP(salon, edificio, time_range)
             elif script_name == "graLv.py":
@@ -135,13 +137,13 @@ def insercion_graLv(salon, edificio, rango):
     image1_path = f"../img/poli/VS{salon}-{rango}-{datetime.today().strftime("%d-%m-%Y")}.png" 
 
     texto_imagen = r"""
-    \section{""" + edificio +r""", Salon: """+ salon +r"""}
-    \begin{figure}
+    \section{""" + edificio + r""", Salon: """ + salon + r"""}
+    \noindent
+    \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=0.5\textwidth]{""" + image1_path + r"""}
-        \caption{Visitas por Salon}
-    \end{figure}
-
+        \includegraphics[width=\textwidth]{""" + image1_path + r"""}
+        \captionof{figure}{Visitas por Salon}
+    \end{minipage}
     """
     return texto_imagen
 

@@ -5,6 +5,14 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
 
+def conteo_registros():
+    registros=bdc.consultar("SELECT count(*) as no_registros FROM visita;")
+    return int(registros.iloc[0,0])
+
+def obtener_fechas_inicio_fin_personalizado():
+    fecha_1 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada ASC LIMIT 1;")
+    fecha_2 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada DESC LIMIT 1;")
+    return str(fecha_1.iloc[0, 0]), str(fecha_2.iloc[0, 0]) 
 
 def transformar_fechas(time_range):
     end_date = datetime.today()
@@ -53,11 +61,13 @@ def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
                     plot_bgcolor='rgba(0, 0, 0, 0)'    # Fondo de la cuadrícula transparente
                 )
         
-        return fig_pol1
+
+
+        return fig_pol1, visitas
 
     elif visitas.empty:
         st.warning(f"No hay datos para el tiempo referido")
-        return None
+        return None, pd.DataFrame()
 
 
 def obtener_salones():
