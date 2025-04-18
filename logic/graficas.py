@@ -34,15 +34,16 @@ def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
     # Generamos la fecha del dia siguiente
     end_date_siguiente = (end_date + timedelta(days=1)).strftime('%Y-%m-%d')
     visitas = bdc.consultar(
-        f"SELECT DATE(v.visita_entrada) AS fecha, count(*) AS visitas "
-        f"FROM visita v INNER JOIN salon s ON v.idsalon = s.idsalon "
-        f"WHERE v.visita_entrada >= '{start_date}' "
-        f"AND v.visita_entrada < '{end_date_siguiente}' "
-        f"AND s.salon = '{salon}' "
-        f"AND s.edificio = '{edificio}' "
-        f"GROUP BY fecha;", "Obteneniendo Visitas-Tiempo"
-        f"ORDERY BY fecha ASC"
-        )
+    f"SELECT DATE(v.visita_entrada) AS fecha, count(*) AS visitas "
+    f"FROM visita v INNER JOIN salon s ON v.idsalon = s.idsalon "
+    f"WHERE v.visita_entrada >= '{start_date}' "
+    f"AND v.visita_entrada < '{end_date_siguiente}' "
+    f"AND s.salon = '{salon}' "
+    f"AND s.edificio = '{edificio}' "
+    f"GROUP BY fecha "
+    f"ORDER BY fecha ASC;",
+    "Obteneniendo Visitas-Tiempo"
+)
     
 
     if isinstance(visitas, pd.DataFrame) and not visitas.empty:
@@ -71,7 +72,6 @@ def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
     elif visitas.empty:
         st.warning(f"No hay datos para el tiempo referido")
         return None, pd.DataFrame()
-
 
 def obtener_salones():
     # Ejecutar la consulta y obtener los resultados en un DataFrame

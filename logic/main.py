@@ -102,8 +102,6 @@ with tab1:
             st.plotly_chart(uso_salon, use_container_width=True)
         with col2:
             st.plotly_chart(uso_diario, use_container_width=True)
-    else: 
-        st.warning("No hay datos para los parámetros")
 
     st.markdown("## Número de Visitas")
     col1, col2 = st.columns(2)
