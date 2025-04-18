@@ -22,7 +22,7 @@ def conectarBase():
         # Conectar al motor (esto también verifica si la conexión es válida)
         connection = engine.connect()
         
-        print("Conectado a la base de datos MySQL con SQLAlchemy.")
+        #print("Conectado a la base de datos MySQL con SQLAlchemy.")
         return connection
 
     except Exception as e:
@@ -55,7 +55,7 @@ def actualizar(query):
 
 
 # Hacer una consulta de datos
-def consultar(query):
+def consultar(query, msj="naranjas"):
     """Ejecuta una consulta en la base de datos y devuelve los resultados en un DataFrame."""
     connection = conectarBase()
     if connection is None:
@@ -65,6 +65,7 @@ def consultar(query):
     try:
         # Ejecutar la consulta y obtener los resultados en un DataFrame usando pandas y SQLAlchemy
         df = pd.read_sql(query, connection)
+        print(msj)
         return df
 
     except Exception as e:
@@ -81,4 +82,4 @@ def cerrarConexion(connection):
     """Cierra la conexión a la base de datos."""
     if connection is not None:
         connection.close()
-        print("Conexión cerrada")
+        #print("Conexión cerrada")

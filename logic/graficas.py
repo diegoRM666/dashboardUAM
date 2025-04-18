@@ -6,12 +6,12 @@ from datetime import datetime, timedelta
 
 
 def conteo_registros():
-    registros=bdc.consultar("SELECT count(*) as no_registros FROM visita;")
+    registros=bdc.consultar("SELECT count(*) as no_registros FROM visita;", "Contando Registros")
     return int(registros.iloc[0,0])
 
 def obtener_fechas_inicio_fin_personalizado():
-    fecha_1 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada ASC LIMIT 1;")
-    fecha_2 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada DESC LIMIT 1;")
+    fecha_1 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada ASC LIMIT 1;", "Obteniendo Fechas Inicio Visita")
+    fecha_2 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada DESC LIMIT 1;", "Obteniendo Fechas Fin Visita")
     return str(fecha_1.iloc[0, 0]), str(fecha_2.iloc[0, 0]) 
 
 def transformar_fechas(time_range):
@@ -31,14 +31,17 @@ def transformar_fechas(time_range):
     return start_date
 
 def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
+    # Generamos la fecha del dia siguiente
+    end_date_siguiente = (end_date + timedelta(days=1)).strftime('%Y-%m-%d')
     visitas = bdc.consultar(
         f"SELECT DATE(v.visita_entrada) AS fecha, count(*) AS visitas "
         f"FROM visita v INNER JOIN salon s ON v.idsalon = s.idsalon "
         f"WHERE v.visita_entrada >= '{start_date}' "
-        f"AND v.visita_entrada < '{end_date}' "
+        f"AND v.visita_entrada < '{end_date_siguiente}' "
         f"AND s.salon = '{salon}' "
         f"AND s.edificio = '{edificio}' "
-        f"GROUP BY fecha;"
+        f"GROUP BY fecha;", "Obteneniendo Visitas-Tiempo"
+        f"ORDERY BY fecha ASC"
         )
     
 
@@ -72,10 +75,12 @@ def obtener_visitas_tiempo(salon, edificio, start_date, end_date):
 
 def obtener_salones():
     # Ejecutar la consulta y obtener los resultados en un DataFrame
-    salones = bdc.consultar("SELECT edificio, salon FROM salon;")
+    salones = bdc.consultar("SELECT edificio, salon FROM salon;", "Obteniendo Salones")
     return salones
 
 def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date, end_date):
+    # Generamos la fecha del dia siguiente
+    end_date_siguiente = (end_date + timedelta(days=1)).strftime('%Y-%m-%d')
     # Consulta para obtener los datos en un DataFrame
     ocupacion_salon = bdc.consultar(
         f"SELECT s.edificio AS edificio, s.salon AS salon, v.visita_entrada AS entrada, "
@@ -85,7 +90,8 @@ def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date, end_dat
         f"INNER JOIN profesor p ON v.idprofesor = p.idprofesor "
         f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}' "
         f"AND v.visita_entrada >= '{start_date}' "
-        f"AND v.visita_entrada <= '{end_date}';"
+        f"AND v.visita_entrada <= '{end_date_siguiente}'"
+        f"ORDER BY entrada ASC;", "Consultando Uso Salon Dia"
     )
 
     #Generacion de columnas para que se vea como un dashboard
@@ -159,16 +165,18 @@ def uso_salon_dia(salon_seleccionado, edificio_seleccionado, start_date, end_dat
         st.error(f"Error: {ocupacion_salon}")
         return None, None
     
-def condicion_salon (salon_seleccionado, edificio_seleccionado, start_date):
+def condicion_salon (salon_seleccionado, edificio_seleccionado, start_date, end_date):
+    # Generamos la fecha del dia siguiente
+    end_date_siguiente = (end_date + timedelta(days=1)).strftime('%Y-%m-%d')
     # Condiciones del salon: 
-
     condiciones_salon = bdc.consultar(
         f"SELECT s.edificio AS edificio, s.salon AS salon, c.temperatura AS temperatura, " 
         f"c.humedad AS humedad, c.luminosidad AS luminosidad, time_condicion AS fecha "
         f"FROM salon s "
         f"INNER JOIN condicion c ON c.idsalon = s.idsalon "
         f"WHERE s.salon = {salon_seleccionado} AND s.edificio = '{edificio_seleccionado}'"
-        f"AND time_condicion >= '{start_date}';")
+        f"AND time_condicion >= '{start_date}'"
+        f"AND time_condicion <= '{end_date_siguiente}';", "Consultando Condiciones Salon")
 
     if isinstance(condiciones_salon, pd.DataFrame) and not condiciones_salon.empty:
 
