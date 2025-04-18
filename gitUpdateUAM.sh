@@ -2,7 +2,7 @@
 
 # Detectar el sistema operativo y establecer la ruta del proyecto
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    ruta_proyecto="/home/mrcubeoner/Desktop/DashboardUAM/dashboardUAM"
+    ruta_proyecto="/home/mrcubeoner/Documentos/dashboardUAM"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     ruta_proyecto="/Users/diegoruiz/Desktop/DashboardUAM/dashboardUAM"
 else
