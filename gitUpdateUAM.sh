@@ -4,7 +4,7 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     ruta_proyecto="/home/mrcubeoner/Documentos/dashboardUAM"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    ruta_proyecto="/Users/diegoruiz/Desktop/DashboardUAM/dashboardUAM"
+    ruta_proyecto="/Users/diegoruiz/Documents/UAM/DashboardUAM/dashboardUAM"
 else
     echo "Error: Sistema operativo no soportado"
     exit 1
