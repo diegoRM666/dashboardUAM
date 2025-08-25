@@ -9,7 +9,7 @@ def conectarBase():
     s_o = platform.system()
     try:
         if s_o == "Darwin":
-            password = '15122121B'
+            password = 'admin'
         else:
             password = 'gogo219715122121B$'
         

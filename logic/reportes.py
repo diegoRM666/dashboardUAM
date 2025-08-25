@@ -192,5 +192,7 @@ def compilar_tex(tex_path):
             check=True
         )
         print(f"Archivo compilado correctamente en {output_dir}")
+        return output_dir;
     except subprocess.CalledProcessError as e:
         print(f"Error al compilar el documento: {e}")
+        return None

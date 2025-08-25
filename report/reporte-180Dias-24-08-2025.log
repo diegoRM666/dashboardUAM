@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.16)  17 APR 2025 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.16)  24 AUG 2025 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**../report/reporte-180Dias-17-04-2025.tex
-(../report/../report/reporte-180Dias-17-04-2025.tex
+**../report/reporte-180Dias-24-08-2025.tex
+(../report/../report/reporte-180Dias-24-08-2025.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -97,8 +97,8 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count267
 \l__pdf_internal_box=\box51
 )
-(../report/reporte-180Dias-17-04-2025.aux)
-\openout1 = `reporte-180Dias-17-04-2025.aux'.
+No file reporte-180Dias-24-08-2025.aux.
+\openout1 = `reporte-180Dias-24-08-2025.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -114,7 +114,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count268
@@ -179,86 +178,86 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 15.
-<../img/pie/UP102-180Dias-17-04-2025.png, id=1, 501.875pt x 501.875pt>
-File: ../img/pie/UP102-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UP102-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UP102-180Dias-17-04-2025.png  used on input
+<../img/pie/UP102-180Dias-24-08-2025.png, id=1, 501.875pt x 501.875pt>
+File: ../img/pie/UP102-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UP102-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UP102-180Dias-24-08-2025.png  used on input
  line 22.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 24.
-<../img/pie/UD102-180Dias-17-04-2025.png, id=3, 501.875pt x 501.875pt>
-File: ../img/pie/UD102-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UD102-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UD102-180Dias-17-04-2025.png  used on input
+<../img/pie/UD102-180Dias-24-08-2025.png, id=3, 501.875pt x 501.875pt>
+File: ../img/pie/UD102-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UD102-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UD102-180Dias-24-08-2025.png  used on input
  line 28.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
-<../img/pie/UP101-180Dias-17-04-2025.png, id=4, 501.875pt x 501.875pt>
-File: ../img/pie/UP101-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UP101-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UP101-180Dias-17-04-2025.png  used on input
+<../img/pie/UP101-180Dias-24-08-2025.png, id=4, 501.875pt x 501.875pt>
+File: ../img/pie/UP101-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UP101-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UP101-180Dias-24-08-2025.png  used on input
  line 37.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
-<../img/pie/UD101-180Dias-17-04-2025.png, id=5, 501.875pt x 501.875pt>
-File: ../img/pie/UD101-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UD101-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UD101-180Dias-17-04-2025.png  used on input
+<../img/pie/UD101-180Dias-24-08-2025.png, id=5, 501.875pt x 501.875pt>
+File: ../img/pie/UD101-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UD101-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UD101-180Dias-24-08-2025.png  used on input
  line 43.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../repo
-rt/../img/pie/UP102-180Dias-17-04-2025.png> <../report/../img/pie/UD102-180Dias
--17-04-2025.png>]
-<../img/pie/UP702-180Dias-17-04-2025.png, id=17, 501.875pt x 501.875pt>
-File: ../img/pie/UP702-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UP702-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UP702-180Dias-17-04-2025.png  used on input
+rt/../img/pie/UP102-180Dias-24-08-2025.png> <../report/../img/pie/UD102-180Dias
+-24-08-2025.png>]
+<../img/pie/UP702-180Dias-24-08-2025.png, id=17, 501.875pt x 501.875pt>
+File: ../img/pie/UP702-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UP702-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UP702-180Dias-24-08-2025.png  used on input
  line 52.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
-<../img/pie/UD702-180Dias-17-04-2025.png, id=18, 501.875pt x 501.875pt>
-File: ../img/pie/UD702-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/pie/UD702-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/pie/UD702-180Dias-17-04-2025.png  used on input
+<../img/pie/UD702-180Dias-24-08-2025.png, id=18, 501.875pt x 501.875pt>
+File: ../img/pie/UD702-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/pie/UD702-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/pie/UD702-180Dias-24-08-2025.png  used on input
  line 58.
 (pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
-<../img/poli/VS102-180Dias-17-04-2025.png, id=19, 702.625pt x 501.875pt>
-File: ../img/poli/VS102-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/poli/VS102-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/poli/VS102-180Dias-17-04-2025.png  used on inpu
+<../img/poli/VS102-180Dias-24-08-2025.png, id=19, 702.625pt x 501.875pt>
+File: ../img/poli/VS102-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/poli/VS102-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/poli/VS102-180Dias-24-08-2025.png  used on inpu
 t line 69.
 (pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
- [2 <../report/../img/pie/UP101-180Dias-17-04-2025.png> <../report/../img/pie/U
-D101-180Dias-17-04-2025.png> <../report/../img/pie/UP702-180Dias-17-04-2025.png
-> <../report/../img/pie/UD702-180Dias-17-04-2025.png>]
-<../img/poli/VS101-180Dias-17-04-2025.png, id=27, 702.625pt x 501.875pt>
-File: ../img/poli/VS101-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/poli/VS101-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/poli/VS101-180Dias-17-04-2025.png  used on inpu
+ [2 <../report/../img/pie/UP101-180Dias-24-08-2025.png> <../report/../img/pie/U
+D101-180Dias-24-08-2025.png> <../report/../img/pie/UP702-180Dias-24-08-2025.png
+> <../report/../img/pie/UD702-180Dias-24-08-2025.png>]
+<../img/poli/VS101-180Dias-24-08-2025.png, id=27, 702.625pt x 501.875pt>
+File: ../img/poli/VS101-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/poli/VS101-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/poli/VS101-180Dias-24-08-2025.png  used on inpu
 t line 78.
 (pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
-<../img/poli/VS702-180Dias-17-04-2025.png, id=28, 702.625pt x 501.875pt>
-File: ../img/poli/VS702-180Dias-17-04-2025.png Graphic file (type png)
-<use ../img/poli/VS702-180Dias-17-04-2025.png>
-Package pdftex.def Info: ../img/poli/VS702-180Dias-17-04-2025.png  used on inpu
+<../img/poli/VS702-180Dias-24-08-2025.png, id=28, 702.625pt x 501.875pt>
+File: ../img/poli/VS702-180Dias-24-08-2025.png Graphic file (type png)
+<use ../img/poli/VS702-180Dias-24-08-2025.png>
+Package pdftex.def Info: ../img/poli/VS702-180Dias-24-08-2025.png  used on inpu
 t line 87.
 (pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
 
-[3 <../report/../img/poli/VS102-180Dias-17-04-2025.png> <../report/../img/poli/
-VS101-180Dias-17-04-2025.png> <../report/../img/poli/VS702-180Dias-17-04-2025.p
-ng>] (../report/reporte-180Dias-17-04-2025.aux)
+[3 <../report/../img/poli/VS102-180Dias-24-08-2025.png> <../report/../img/poli/
+VS101-180Dias-24-08-2025.png> <../report/../img/poli/VS702-180Dias-24-08-2025.p
+ng>] (../report/reporte-180Dias-24-08-2025.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3301 strings out of 474116
- 59731 string characters out of 5743682
+ 3298 strings out of 474116
+ 59608 string characters out of 5743682
  1929187 words of memory out of 5000000
- 25677 multiletter control sequences out of 15000+600000
+ 25676 multiletter control sequences out of 15000+600000
  561709 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,288b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -266,7 +265,7 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on ../report/reporte-180Dias-17-04-2025.pdf (3 pages, 227851 byt
+Output written on ../report/reporte-180Dias-24-08-2025.pdf (3 pages, 233089 byt
 es).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)

@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 import time
 import profesores as pr
 from streamlit_autorefresh import st_autorefresh
+import os
 
 st.set_page_config(layout="wide")
 
@@ -201,6 +202,25 @@ with tab3:
                 datetime.today().strftime("%d-%m-%Y"),
                 tex_img
             )
-            rp.compilar_tex(tex_path)
+            output_dir=rp.compilar_tex(tex_path)
         st.success(f"Reporte generado para los últimos {rango_reporte}... ✅")
         st.session_state.generando_reporte = False
+
+        # --- Lógica para el botón de descarga ---
+        # Verificamos si output_dir no es None y si el archivo PDF se generó
+        if output_dir is not None:
+            # El nombre del archivo PDF se genera a partir del nombre del archivo .tex
+            nombre_base = os.path.basename(tex_path)
+            nombre_pdf = nombre_base.replace(".tex", ".pdf")
+            reporte_path = os.path.join(output_dir, nombre_pdf)
+
+            if os.path.exists(reporte_path):
+                with open(reporte_path, "rb") as file:
+                    st.download_button(
+                        label="Descargar Reporte",
+                        data=file,
+                        file_name=nombre_pdf,
+                        mime="application/pdf"
+                    )
+            else:
+                st.warning("El archivo de reporte no se encontró. Hubo un error al compilar el PDF.")
