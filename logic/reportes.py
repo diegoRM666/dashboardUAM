@@ -68,6 +68,8 @@ def graficos_reporte(start_date,end_date, time_range):
 
     return texto1, texto2, texto3
 
+
+# Funcione de Limpieza
 def limpiar_y_recrear(carpeta):
     if os.path.exists(carpeta):
         shutil.rmtree(carpeta)  # Elimina la carpeta y todo su contenido
