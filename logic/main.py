@@ -15,6 +15,7 @@ st.set_page_config(layout="wide")
 if "generando_reporte" not in st.session_state:
     st.session_state.generando_reporte = False
 
+# Actualizar tiempo en caso de ser necesario (ms)
 if not st.session_state.generando_reporte:
     st_autorefresh(interval=120000, limit=None, key="dashboard_refresh")
 
@@ -87,6 +88,8 @@ with tab1:
         st.session_state.fig_hum = fig_hum
         st.session_state.fig_lum = fig_lum
         st.session_state.promedios = promedios
+
+        st.rerun()
     else:
         uso_salon = st.session_state.uso_salon
         uso_diario = st.session_state.uso_diario

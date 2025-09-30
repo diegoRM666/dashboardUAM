@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.16)  24 SEP 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.16)  26 SEP 2025 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**../report/reporte-30Dias-24-09-2025.tex
-(../report/../report/reporte-30Dias-24-09-2025.tex
+**../report/reporte-180Dias-26-09-2025.tex
+(../report/../report/reporte-180Dias-26-09-2025.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -97,8 +97,8 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count267
 \l__pdf_internal_box=\box51
 )
-No file reporte-30Dias-24-09-2025.aux.
-\openout1 = `reporte-30Dias-24-09-2025.aux'.
+No file reporte-180Dias-26-09-2025.aux.
+\openout1 = `reporte-180Dias-26-09-2025.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -178,31 +178,77 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 15.
+<../img/pie/UP101-180Dias-26-09-2025.png, id=1, 501.875pt x 501.875pt>
+File: ../img/pie/UP101-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/pie/UP101-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/pie/UP101-180Dias-26-09-2025.png  used on input
+ line 22.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 24.
+<../img/pie/UD101-180Dias-26-09-2025.png, id=3, 501.875pt x 501.875pt>
+File: ../img/pie/UD101-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/pie/UD101-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/pie/UD101-180Dias-26-09-2025.png  used on input
+ line 28.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UP702-180Dias-26-09-2025.png, id=4, 501.875pt x 501.875pt>
+File: ../img/pie/UP702-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/pie/UP702-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/pie/UP702-180Dias-26-09-2025.png  used on input
+ line 37.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
+<../img/pie/UD702-180Dias-26-09-2025.png, id=5, 501.875pt x 501.875pt>
+File: ../img/pie/UD702-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/pie/UD702-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/pie/UD702-180Dias-26-09-2025.png  used on input
+ line 43.
+(pdftex.def)             Requested size: 225.4804pt x 225.48174pt.
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(../report/reporte-30Dias-24-09-2025.aux)
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../repo
+rt/../img/pie/UP101-180Dias-26-09-2025.png> <../report/../img/pie/UD101-180Dias
+-26-09-2025.png>]
+<../img/poli/VS101-180Dias-26-09-2025.png, id=17, 702.625pt x 501.875pt>
+File: ../img/poli/VS101-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/poli/VS101-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/poli/VS101-180Dias-26-09-2025.png  used on inpu
+t line 54.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+<../img/poli/VS702-180Dias-26-09-2025.png, id=18, 702.625pt x 501.875pt>
+File: ../img/poli/VS702-180Dias-26-09-2025.png Graphic file (type png)
+<use ../img/poli/VS702-180Dias-26-09-2025.png>
+Package pdftex.def Info: ../img/poli/VS702-180Dias-26-09-2025.png  used on inpu
+t line 63.
+(pdftex.def)             Requested size: 225.4804pt x 161.0551pt.
+ [2 <../report/../img/pie/UP702-180Dias-26-09-2025.png> <../report/../img/pie/U
+D702-180Dias-26-09-2025.png> <../report/../img/poli/VS101-180Dias-26-09-2025.pn
+g>] [3 <../report/../img/poli/VS702-180Dias-26-09-2025.png>] (../report/reporte
+-180Dias-26-09-2025.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3222 strings out of 474116
- 56452 string characters out of 5743682
- 1926187 words of memory out of 5000000
- 25601 multiletter control sequences out of 15000+600000
- 561104 words of font info for 46 fonts, out of 8000000 for 9000
+ 3277 strings out of 474116
+ 58638 string characters out of 5743682
+ 1929187 words of memory out of 5000000
+ 25655 multiletter control sequences out of 15000+600000
+ 561709 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,287b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on ../report/reporte-30Dias-24-09-2025.pdf (1 page, 37620 bytes)
-.
+ 57i,7n,65p,288b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on ../report/reporte-180Dias-26-09-2025.pdf (3 pages, 166386 byt
+es).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

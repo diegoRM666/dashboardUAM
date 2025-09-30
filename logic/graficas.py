@@ -10,8 +10,8 @@ def conteo_registros():
     return int(registros.iloc[0,0])
 
 def obtener_fechas_inicio_fin_personalizado():
-    fecha_1 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada ASC LIMIT 1;", "Obteniendo Fechas Inicio Visita")
-    fecha_2 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada DESC LIMIT 1;", "Obteniendo Fechas Fin Visita")
+    fecha_1 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada ASC LIMIT 1;", "")
+    fecha_2 = bdc.consultar("SELECT DATE(visita_entrada) FROM visita ORDER BY visita_entrada DESC LIMIT 1;", "")
     return str(fecha_1.iloc[0, 0]), str(fecha_2.iloc[0, 0]) 
 
 def transformar_fechas(time_range):
