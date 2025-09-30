@@ -1,45 +1,202 @@
-## Tabla de Contenidos
+# 🏫 Sistema de Monitoreo Inteligente para Salones — UAM Azcapotzalco
 
-- [Introducción](#introducción)
-- [Objetivos](#Objetivos)
-- [Desarrollo](#Desarrollo)
+Este proyecto presenta una plataforma web desarrollada en **Python** que permite monitorear en tiempo real las **condiciones ambientales** y la **afluencia de personas** en salones de clase, integrando sensores IoT, visualizaciones interactivas y generación automática de reportes PDF.
 
-# Introducción
+> 📍 Proyecto realizado como parte del **Servicio Social en el Laboratorio de Procesamiento de Lenguaje Natural e IoT** (UAM Azcapotzalco)  
+> 📅 Periodo: Abril 2024 – Septiembre 2025
 
-Este documento pretende funcionar a manera de reporte, pero igualmente de manual para la utilización de la plataforma de monitoreo de sensores propuesta. 
+---
 
-El uso de IoT se ha vuelto una constante en nuestro día a día desde su aparición, prácticamente en la mayoría de nuestras actividades vemos involucrado al internet, desde cerraduras en el hogar hasta máquinas de riego. 
+## 🧭 Tabla de Contenidos
 
-Todos los datos recolectados deben de ir a parar a algún lado y no solo eso, deben de existir mecanismos o herramientas que nos permitan visualizarlos. 
+- [🚀 Características](#-características)  
+- [📸 Vista Previa](#-vista-previa)  
+- [🧱 Arquitectura](#-arquitectura)  
+- [⚙️ Requisitos](#️-requisitos)  
+- [📝 Instalación y Ejecución](#-instalación-y-ejecución)  
+- [🌐 Estructura de la App](#-estructura-de-la-app)  
+- [📄 Generación de Reportes](#-generación-de-reportes)  
+- [👩‍🏫 Módulo de Profesores](#-módulo-de-profesores)  
+- [☁️ Despliegue](#️-despliegue)  
+- [🧪 Tecnologías Usadas](#-tecnologías-usadas)  
+- [📝 Licencia y Créditos](#-licencia-y-créditos)
 
-Bajo está premisa, el uso de una aplicación web que nos permita monitorear de manera constante los datos que te recopilan los dispositivos de IoT es fundamental, de esta forma podremos aprovechar de mayor forma la incorporación de estos dispositivos. Así mismo, es fundamental el poder interactuar con estos datos, con la finalidad de volverlos más atractivos y sencillos para quien los consume. 
+---
 
-Este proyecto busca como objetivo general el construir una plataforma que nos permita monitorear los datos recolectados por un conjunto de sensores, esta información esta relacionada con el reconocimiento de profesores que acceden a cada uno de los salones y de las condiciones atmosféricas que presenta cada uno de los mismos. Finalmente, el propósito es poder generar reportes en PDF que nos permitan generar la recolección de datos de manera general en un rango de tiempo. 
+## 🚀 Características
 
-# Objetivos 
-1. Apoyo en el diseño de la Base de Datos Relacional para almacenar la información de las entidades participantes en un entorno académico.
-2. Apoyo en el diseño de una aplicación web basada en el patrón de diseño **Modelo-Vista-Controlador** para la visualización y procesamiento de datos obtenidos por la red.
-3. Apoyo en el mantenimiento de la página web del área de investigación en sistemas de información Inteligentes.
+- 🌡️ **Monitoreo en tiempo real** de temperatura, humedad e iluminación por salón.  
+- 👤 **Identificación automática** de profesores mediante RFID y reconocimiento facial.  
+- 📊 **Dashboards interactivos** construidos con Streamlit y Plotly.  
+- 🧾 **Reportes PDF automáticos** generados dinámicamente con PyLaTeX.  
+- 🧰 **Backend optimizado** con SQLAlchemy y arquitectura Modelo–Vista–Controlador.  
+- 📅 Itinerarios por profesor y visualización histórica de condiciones.  
+- 🧼 Limpieza automática de archivos generados para evitar sobrecarga.
 
-# Desarrollo
-## Modelo de Base de Datos Relacional
-Basado en la información recibida, se propuso la siguiente base de datos relacional que nos permita guardar uno a uno los registros que se vayan extrayendo de los sensores.
+---
 
-![Modelo Relacional Base de Datos Sensores](bd_fig.png)
+## 📸 Vista Previa
 
-- La tabla **condición** tomará todas y cada una de las mediciones de condición del salón independientemente de una visita, esto con la finalidad de que las condiciones se continúen tomando a lo largo del tiempo.
-- La tabla **salón** es una restricción de valor donde solamente estarán los salones que pertenezcan al sistema. 
-- La tabla **profesores** funciona bastante similar en ese aspecto, ya que determinara si uno de los profesores es reconocido o no. 
-- La tabla **preferencias_atomosféricas** determinará que condiciones son las preferidas para un profesor, en realidad esto esta representado como una relación *1:1*, pero se realizó con una relación *1:M*. Esto no genera ningún conflicto ya que dentro del aplicativo de *python* se restringe la capacidad de ingresar más valores de condiciones atmosféricas para un profesor. 
-- Por último, la tabla *visita* funciona en forma de una tabla que concentra los datos del profesor y del salón, en este sentido para cada profesor habrá una o más visitas a uno o más salones, así como un salón tendrá una o más visitas de uno o más profesores. 
+**Dashboard principal**  
+Muestra gráficos poligonales y de pastel sobre uso de salones, visitas y condiciones ambientales.
 
-# Aplicativo de Python
-Se pensó en el uso de un dashboard que mostrará la información discriminando de acuerdo al salón y edificio elegido en un rango de tiempo preestablecido. 
+```
+Pestaña Dashboard → Selección por Edificio / Salón / Rango de fechas
+ ├─ Gráficas de visitas por día y por profesor
+ ├─ Historial de condiciones atmosféricas
+ └─ Control de actualizaciones eficiente
+```
 
-Se generan dos gráficas de pastel para determina las horas que uso el profesor el salón y otra que determina las horas que se uso el salón por día, ambas en un rango de tiempo establecido. 
+**Itinerario de profesores**  
+Consulta de historial de visitas, preferencias ambientales y actualización interactiva.
 
-![Dashboard](db_1.png)
+**Reportes automáticos**  
+Generación de informes PDF personalizables por rango de tiempo (30, 90, 180 días).
 
+---
 
+## 🧱 Arquitectura
 
+```text
+📂 dashboardUAM/
+├── main.py              # Vista principal (Streamlit UI)
+├── bd.py                # Conexión a la base de datos (Modelo)
+├── graficas.py          # Generación de gráficos dinámicos (Modelo)
+├── graLc.py             # Gráficos de condiciones → imágenes
+├── graLv.py             # Gráficos de visitas → imágenes
+├── graP.py              # Gráficos de pastel → imágenes
+├── reportes.py          # Generación de PDF vía LaTeX (Modelo)
+├── profesores.py        # Interacción con datos de profesores (Modelo)
+├── img/                 # Carpeta de imágenes generadas (poligonales, pastel, tablas)
+└── reports/             # Reportes PDF generados
+```
 
+La arquitectura sigue el patrón **Modelo–Vista–Controlador (MVC)**:
+
+- **Modelo:** `bd.py`, `graficas.py`, `reportes.py`, `profesores.py`  
+- **Vista:** `main.py` (Streamlit UI)  
+- **Controlador:** integración mediante llamadas entre scripts y subprocesos
+
+---
+
+## ⚙️ Requisitos
+
+- Python ≥ 3.9  
+- [Streamlit](https://streamlit.io/)  
+- [Plotly](https://plotly.com/)  
+- [Pandas](https://pandas.pydata.org/)  
+- [SQLAlchemy](https://www.sqlalchemy.org/)  
+- [PyLaTeX](https://pypi.org/project/PyLaTeX/)  
+
+Instalar dependencias:
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+---
+
+## 📝 Instalación y Ejecución
+
+1️⃣ Clona el repositorio:
+
+```bash
+git clone https://github.com/diegoRM666/dashboardUAM.git
+cd dashboardUAM
+```
+
+2️⃣ Instala dependencias:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+3️⃣ Inicia la aplicación:
+
+```bash
+cd logic
+streamlit run main.py
+```
+
+4️⃣ Accede desde tu navegador (por defecto: http://localhost:8501)
+
+> Asegúrate de que la máquina esté en la misma red que los sensores y la base de datos.
+
+---
+
+## 🌐 Estructura de la App
+
+### 🧭 Pestaña “Dashboard”
+- Selección por salón, edificio y rango de fechas.  
+- Actualización eficiente si no ha cambiado la data.  
+- Gráficos de visitas (profesor/día) y condiciones ambientales.
+
+### 👨‍🏫 Pestaña “Itinerario Profesor”
+- Lista desplegable de profesores.  
+- Consulta de preferencias atmosféricas y visitas.  
+- Actualización de preferencias (temperatura, humedad, iluminación).
+
+### 🧾 Pestaña “Reportes”
+- Generación de reportes PDF en 3 rangos:
+  - 30 días
+  - 90 días
+  - 180 días  
+- Incluye limpieza automática de imágenes previas y generación paralela de gráficos.
+
+---
+
+## 📄 Generación de Reportes
+
+La función `reportes.py`:
+- Limpia carpetas de imágenes y reportes anteriores.  
+- Genera gráficos por salón/edificio mediante subprocesos (`graP.py`, `graLv.py`, `graLc.py`).  
+- Ensambla el documento LaTeX con el contenido generado.  
+- Compila automáticamente el PDF final.
+
+Los reportes incluyen:
+- Historial de visitas
+- Condiciones ambientales promedio
+- Uso por profesor y día
+
+---
+
+## 👩‍🏫 Módulo de Profesores
+
+El script `profesores.py` permite:
+- Consultar lista de profesores y sus itinerarios.  
+- Ver preferencias ambientales actuales.  
+- Modificarlas manualmente o restaurarlas a valores normativos (NMX-C-7730-ONNCCE-2018, NOM-025-STPS-2008).
+
+---
+
+## ☁️ Despliegue
+
+Puedes desplegar esta plataforma de varias formas:
+
+- 🖥️ **Local / Intranet:** ejecutar con `streamlit run`.  
+- ☁️ **En la nube (AWS, Azure, GCP):** desplegar la app y la base de datos para acceso remoto.  
+- 🐳 **Contenedores Docker:** separar backend y frontend para mantenimiento y escalabilidad.
+
+---
+
+## 🧪 Tecnologías Usadas
+
+| Tecnología     | Uso Principal                                               |
+|---------------|--------------------------------------------------------------|
+| **Python**    | Lenguaje base del proyecto                                  |
+| **Streamlit** | Frontend web interactivo                                    |
+| **Plotly**    | Gráficos interactivos y estáticos                             |
+| **Pandas**    | Procesamiento y análisis de datos tabulares                   |
+| **SQLAlchemy**| Conexión y abstracción de base de datos                       |
+| **PyLaTeX**   | Generación automatizada de reportes en PDF                    |
+| **Threading** | Aceleración de gráficos en paralelo                           |
+
+---
+
+## 📝 Licencia y Créditos
+
+📄 Proyecto académico — Universidad Autónoma Metropolitana, Unidad Azcapotzalco  
+👨‍💻 **Autor:** [Diego Ruiz Mora](https://github.com/diegoRM666)  
+👨‍🏫 **Supervisor:** Dr. Leonardo Daniel Sánchez Martínez  
+📹 [Manual en video](https://youtu.be/DIyoBysRb3c)
